@@ -1,0 +1,30 @@
+<?xml version="1.0"?> 
+
+<project name="nandp" default="build"> 
+	
+	<property file="build.properties"></property>
+	
+	<target name="build">
+		
+		<echo message="build"/>
+		
+		<echo message="deleting"/>
+		
+		<delete file="public/js/main-min.js"/>
+		
+		<concat destfile="public/js/main-min.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
+			<filelist dir="public/js">
+				
+				
+				<file name="app.js"/>
+				<file name="views/main.js"/>
+				<file name="view.js"/>		
+				<file name="router.js"/>
+				<file name="main.js"/>
+				
+			</filelist>
+		</concat>
+		
+	</target>
+	
+</project>
