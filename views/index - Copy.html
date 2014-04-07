@@ -1,0 +1,1300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="libs/jquery-1.9.1.js"></script>
+	<script src="libs/underscore-1.4.4.js"></script>
+	<script src="libs/backbone-1.0.0.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+  </head>
+  <body>
+	
+	
+	<script type="text/template" id="tpl_nav">
+     
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="navbar">Navbar</h1>
+            </div>
+
+            <div class="bs-component">
+              <div class="navbar navbar-default">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Brand</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                  <ul class="nav navbar-nav" >
+                    <li class="active"><a href="#">Active</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-lg-8" placeholder="Search">
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bs-component">
+              <div class="navbar navbar-inverse">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Brand</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-inverse-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Active</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-lg-8" placeholder="Search">
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div><!-- /example -->
+
+          </div>
+        </div>
+      </div>
+
+	</script>
+	<!-- end nav -->
+	
+	
+	
+	
+	
+	<script type="text/template" id="tpl_tables">
+		 <!-- Tables
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="tables">Tables</h1>
+            </div>
+
+            <div class="bs-component">
+              <table class="table table-striped table-hover ">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="info">
+                    <td>3</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="success">
+                    <td>4</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="danger">
+                    <td>5</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="warning">
+                    <td>6</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="active">
+                    <td>7</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                </tbody>
+              </table> 
+            </div><!-- /example -->
+          </div>
+        </div>
+      </div>
+	</script>
+	
+	
+	<script type="text/template" id="tpl_forms">
+		      <div class="bs-docs-section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="forms">Forms</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="well bs-component">
+              <form class="form-horizontal">
+                <fieldset>
+                  <legend>Legend</legend>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Checkbox
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" rows="3" id="textArea"></textarea>
+                      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">Radios</label>
+                    <div class="col-lg-10">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                          Option one is this
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Option two can be something else
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <div class="col-lg-10">
+                      <select class="form-control" id="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                      <br>
+                      <select multiple="" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button class="btn btn-default">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 col-lg-offset-1">
+
+              <form class="bs-component">
+                <div class="form-group">
+                  <label class="control-label" for="focusedInput">Focused input</label>
+                  <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label" for="disabledInput">Disabled input</label>
+                  <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                </div>
+
+                <div class="form-group has-warning">
+                  <label class="control-label" for="inputWarning">Input warning</label>
+                  <input type="text" class="form-control" id="inputWarning">
+                </div>
+
+                <div class="form-group has-error">
+                  <label class="control-label" for="inputError">Input error</label>
+                  <input type="text" class="form-control" id="inputError">
+                </div>
+
+                <div class="form-group has-success">
+                  <label class="control-label" for="inputSuccess">Input success</label>
+                  <input type="text" class="form-control" id="inputSuccess">
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label" for="inputLarge">Large input</label>
+                  <input class="form-control input-lg" type="text" id="inputLarge">
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label" for="inputDefault">Default input</label>
+                  <input type="text" class="form-control" id="inputDefault">
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label" for="inputSmall">Small input</label>
+                  <input class="form-control input-sm" type="text" id="inputSmall">
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Input addons</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Button</button>
+                    </span>
+                  </div>
+                </div>
+              </form>
+
+          </div>
+        </div>
+      </div>
+	</script>
+	
+	
+	<script type="text/template" id="tpl_navs">
+		      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="nav">Navs</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 id="nav-tabs">Tabs</h2>
+            <div class="bs-component">
+              <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                <li class="disabled"><a>Disabled</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="home">
+                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </div>
+                <div class="tab-pane fade" id="profile">
+                  <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                </div>
+                <div class="tab-pane fade" id="dropdown1">
+                  <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+                </div>
+                <div class="tab-pane fade" id="dropdown2">
+                  <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2 id="nav-pills">Pills</h2>
+            <div class="bs-component">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li class="disabled"><a href="#">Disabled</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <br>
+            <div class="bs-component">
+              <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li class="disabled"><a href="#">Disabled</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2 id="nav-breadcrumbs">Breadcrumbs</h2>
+            <div class="bs-component">
+              <ul class="breadcrumb">
+                <li class="active">Home</li>
+              </ul>
+
+              <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Library</li>
+              </ul>
+
+              <ul class="breadcrumb" style="margin-bottom: 5px;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 id="pagination">Pagination</h2>
+            <div class="bs-component">
+              <ul class="pagination">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+
+              <ul class="pagination pagination-lg">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+
+              <ul class="pagination pagination-sm">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2 id="pager">Pager</h2>
+            <div class="bs-component">
+              <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+
+              <ul class="pager">
+                <li class="previous disabled"><a href="#">&larr; Older</a></li>
+                <li class="next"><a href="#">Newer &rarr;</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+
+          </div>
+        </div>
+      </div>
+	</script>
+	
+	
+	<script type="text/template" id="tpl_indicators">
+		      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="indicators">Indicators</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Alerts</h2>
+            <div class="bs-component">
+              <div class="alert alert-dismissable alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4>Warning!</h4>
+                <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="alert alert-dismissable alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="alert alert-dismissable alert-info">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Labels</h2>
+            <div class="bs-component" style="margin-bottom: 40px;">
+              <span class="label label-default">Default</span>
+              <span class="label label-primary">Primary</span>
+              <span class="label label-success">Success</span>
+              <span class="label label-warning">Warning</span>
+              <span class="label label-danger">Danger</span>
+              <span class="label label-info">Info</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+	</script>
+	
+	<script type="text/template" id="tpl_progressbars">
+		      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="progress">Progress bars</h1>
+            </div>
+
+            <h3 id="progress-basic">Basic</h3>
+            <div class="bs-component">
+              <div class="progress">
+                <div class="progress-bar" style="width: 60%;"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-alternatives">Contextual alternatives</h3>
+            <div class="bs-component">
+              <div class="progress">
+                <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-striped">Striped</h3>
+            <div class="bs-component">
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+              </div>
+
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+              </div>
+
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+              </div>
+
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-animated">Animated</h3>
+            <div class="bs-component">
+              <div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 45%"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-stacked">Stacked</h3>
+            <div class="bs-component">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: 35%"></div>
+                <div class="progress-bar progress-bar-warning" style="width: 20%"></div>
+                <div class="progress-bar progress-bar-danger" style="width: 10%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	</script>
+	
+	<script type="text/template" id="tpl_containers">
+		      <div class="bs-docs-section">
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>List groups</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="badge">14</span>
+                  Cras justo odio
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">2</span>
+                  Dapibus ac facilisis in
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">1</span>
+                  Morbi leo risus
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="list-group">
+                <a href="#" class="list-group-item active">
+                  Cras justo odio
+                </a>
+                <a href="#" class="list-group-item">Dapibus ac facilisis in
+                </a>
+                <a href="#" class="list-group-item">Morbi leo risus
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Panels</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+             
+              <div class="panel panel-default">
+                <div class="panel-heading">Panel heading</div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Panel primary</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+
+              <div class="panel panel-success">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Panel success</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+         
+        </div>
+
+        
+       
+      </div>
+	</script>
+	
+	<script type="text/template" id="tpl_dialogs">
+		      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="tables">Dialogs</h1>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+	</script>
+	
+	
+	
+	<!-- header -->
+	<script type="text/template" id="tpl_header">
+		
+		<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+
+		
+		  <a href="../" class="navbar-brand" style="height:82px;"><img src="img/logosmall.png"/><span style="margin-left: 10px;">Numbers & Pictures Ltd</span></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav" style="margin-top: 17px;">
+           
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">My work</a>
+            </li>
+             <li>
+              <a href="#">Other projects</a>
+            </li>
+			 <li>
+              <a href="#">My resum&eacute; / contact</a>
+            </li>
+		  </ul>
+
+         
+
+        </div>
+      </div>
+    </div>
+
+		
+	</script>
+	<!-- end header -->
+	
+	
+	
+	
+	<!-- buttons -->
+	<script type="text/template" id="tpl_buttons">
+		<div class="bs-docs-section">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 id="buttons">Buttons</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <p class="bs-component">
+              <button type="button" class="btn btn-default">Default</button>
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+              <button type="button" class="btn btn-link">Link</button>
+            </p>
+
+           
+
+            <div style="margin-bottom: 15px;">
+              <div class="btn-toolbar bs-component" style="margin: 0;">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default">Default</button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-info">Info</button>
+                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-warning">Warning</button>
+                  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+         
+
+          </div>
+
+        </div>
+      </div>
+
+	</script>
+	
+	<!-- end buttons -->
+	
+	
+	<!-- text -->
+	<script type="text/template" id="tpl_text">
+	<div class="page-header" style="margin-top:95px;">
+        
+        <div class="row">
+			
+			
+		<div class="col-lg-12">
+			<div class="bs-component">
+		   
+			<p>Numbers and Pictures is the private limited company of John Grindall, a developer of educational software.
+			
+			<p>I have worked in the field since 2002 and in the past I have worked for companies including Sherston Education, Sam Learning and HeyMath! on a variety of educational software projects, iPad apps, animated lessons, interactivities, games, puzzles and assessment applications.</p>
+			
+			<p>I recently finished a two-year contract with an educational software company in Chennai, India and before that I was a freelancer, working on a variety of projects for Scholastic Publishing Group.</p>
+			
+			<p>Originally from Leicester in the UK, I spent four years at Cambridge University where I studied maths at Fitzwilliam College Cambridge and I now live in Bangalore, India.</p>
+			
+			<p>Logo</p>
+			
+		<div class="clear"/>
+		
+		<div class="hr">
+		
+			<hr />
+		
+		</div>
+		
+		<h2>My work</h2>
+		
+		<p>In the past I have worked for companies including Sherston Education, Sam Learning and HeyMath! on a variety of educational software projects, iPad apps, animated lessons, interactivities, games, puzzles and assessment applications.</p>
+		
+		
+		<div style="display: block;padding:5px;">
+		<a href=""><img class="noborder trans" style="margin-right:5px" src="img/schol1.gif" width="250" /></a>
+		<a href=""><img class="noborder trans" style="margin-right:5px" src="img/schol2.png" width="75" /></a>
+		<a href=""><img class="noborder trans" style="margin-right:5px" src="img/sam.gif" width="60" /></a>
+		<a href=""><img class="noborder trans" style="margin-right:5px" src="img/sherston.png" width="105" /></a>
+		<a href=""><img class="noborder trans" style="margin-right:5px" src="img/hey.png" width="130" /></a>
+		</div>
+		
+		<br />
+		
+		<p>I am particularly interested in maths education and programming. I love working in Actionscript, but I can also program less complex stuff in Java, also HTML/CSS and PHP. I have recently started to try my hand on some Android projects </p>
+		
+		<p>I am also working on a website <a href="">www.logotacular.com</a>, which is a web application to introduce novices to programming and geometry.  It is based on a programming language
+		called Logo, or "Turtle Maths"</p>
+		
+		<div class="hr"><hr /></div>
+		
+		<h2>Other projects</h2>
+		<p>I lived in India from 2002-2006, working for an educational software company called <a href="http://www.heymath.com">HeyMath!</a> There are lots of <a href="">nice photos here</a>. I play a lot of <a href="http://www.goslingslondonsc.com/">badminton</a> and enjoy reading, walking. I would die (slowly and quietly) without BBC Radio 4.  </p>
+		
+		<p>I completed an MSc in Software Engineering from the University of Westminster in 2010.</p>
+		
+		
+			<p>I have also taught maths as a private tutor, mostly A-Level and IB maths but everything from GCSE up to STEP (the Cambridge University entrance exam for maths).</p>
+		
+		<div class="hr"><hr /></div>
+		</div>
+		</div>
+		
+		
+         
+        </div>
+
+        <!-- Blockquotes -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 id="type-blockquotes">Blockquotes</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="bs-component">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+              </blockquote>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+	  
+	  
+	  
+	  
+	  	<div id="content">
+		
+	
+		<h2>Flipbooks</h2>
+		
+		<a href="img/work/book1_1.jpg" ><img src="img/work/S_book1_1.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/book1_2.jpg" ><img src="img/work/S_book1_2.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		<a href="img/work/book2_1.jpg" ><img src="img/work/S_book2_1.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/book2_2.jpg" ><img src="img/work/S_book2_2.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		<a href="img/work/book3_1.jpg" ><img src="img/work/S_book3_1.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/b1.jpg" ><img src="img/work/b1.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		<a href="img/work/b2.jpg" ><img src="img/work/b2.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/b3.jpg" ><img src="img/work/b3.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		
+		<a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a>
+		
+		
+		
+		
+		<h2>Hot Topics</h2>
+		
+		<a href="img/work/Clipboard02.jpg" ><img src="img/work/S_Clipboard02.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/Clipboard04.jpg" ><img src="img/work/S_Clipboard04.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		
+		
+		<a href="img/work/Clipboard06.jpg" ><img src="img/work/S_Clipboard06.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/Clipboard07.jpg" ><img src="img/work/S_Clipboard07.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		<a href="img/work/img1.jpg" ><img src="img/work/S_img1.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/ht1.jpg" ><img src="img/work/ht1.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		
+		<a href="img/work/ht2.jpg" ><img src="img/work/ht2.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/ht3.jpg" ><img src="img/work/ht3.jpg" class="noborder thumbsmall"/></a>
+		
+		
+		<div class="clear"></div>
+		
+		
+		
+				
+
+		<h2>Return to Mechania</h2>
+		
+		
+		
+		<a href="img/work/large_1.jpg" ><img src="img/work/small_1.jpg" width="200" class="noborder thumbsmall"/></a>
+		<a href="img/work/large_2.jpg" ><img src="img/work/small_2.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		
+		<a href="img/work/large_3.jpg" ><img src="img/work/small_3.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/large_4.jpg" ><img src="img/work/small_4.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		<a href="img/work/large_5.jpg" ><img src="img/work/small_5.jpg" class="noborder thumbsmall"/></a>
+		<a href="img/work/large_6.jpg" ><img src="img/work/small_6.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		<a href="img/work/large_7.jpg" ><img src="img/work/small_7.jpg" class="noborder thumbsmall"/></a>
+		
+		<a href="img/work/large_9.jpg" ><img src="img/work/small_9.jpg" class="noborder thumbsmall"/></a>
+		
+		<div class="clear"></div>
+		
+		
+		<p>Blah</p>
+		
+		
+		<!--MSc, hoptopics, create and display, datahandling, flipbooks, sam learning, science sims, RTM, heymath-->
+			
+			
+	
+	</div>
+	  
+	  
+	  
+	  <div id="content">
+		
+	
+		<h2>Android apps</h2>
+		
+		<h3>Power 4-in-a-row</h3>
+		
+		<p>Power 4-in-a-row is a native Android app, written in Java.  It is based on Connect 4, but that name
+		is copyrighted. It is very similar to Connect 4 with the addition of a yellow power ball that either player can use to complete his/her line</p>
+		
+		<img src="http://www.numbersandpictures.com/img/workother/connect4_screen.jpg" width="200"/>
+		<img src="http://www.numbersandpictures.com/img/workother/connect4_screen2.jpg"  width="200"/>
+		<img src="http://www.numbersandpictures.com/img/workother/connect4_screen3.jpg"  width="200"/>
+		
+		<div class="clear"></div>
+		
+		<div class="gitsrc">
+			<p><a href="https://github.com/jgrindall/Android-Power-4-in-a-row">Source code (github)</a></p>
+		</div>
+		
+		<div class="gplay">
+			<p><a href="https://play.google.com/store/apps/details?id=com.jgrindall.android.connect4&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5qZ3JpbmRhbGwuYW5kcm9pZC5jb25uZWN0NCJd">Find it on Google Play</a></p>
+		</div>
+		
+		
+		
+		
+		<p>Features:</p>
+		
+		<ul style="margin-left:80px;">
+		<li>One or two player</li>
+		<li>Three levels of difficulty</li>
+		<li>Optional powerball</li>
+		<li>Native android app</li>
+		<li>Undo</li>
+		<li>AI</li>
+		
+		</ul>
+		
+		<h3>iChing</h3>
+		
+		
+		<img src="http://www.numbersandpictures.com/img/workother/ching1.jpg" width="300"/>
+		<img src="http://www.numbersandpictures.com/img/workother/ching2.jpg"  width="300"/>
+		
+		
+		<div class="clear"></div>
+		
+		<div class="gitsrc">
+			<p><a href="https://github.com/jgrindall/iChing">Source code (github)</a></p>
+		</div>
+		
+		<div class="gplay">
+			<p><a href="https://play.google.com/store/apps/details?id=com.jgrindall.android.connect4&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5qZ3JpbmRhbGwuYW5kcm9pZC5jb25uZWN0NCJd">Find it on Google Play</a></p>
+		</div>
+		
+	
+	</div>
+	  
+	  
+	  
+	  Msc, sam learning, science sims, RTM, heymath
+	  
+	  
+	 	
+		<h2>Contact me </h2>
+		
+		<p>I am often looking for teaching and Actionscript freelance work. You can contact me using the following methods:</p>
+		
+		<ul style="margin-left:50px;">
+		<li style="margin-bottom:15px;" >Phone (UK) <img class="noborder" src="img/phone.gif" style="margin-bottom:-14px;"/></li>
+		<li style="margin-bottom:15px;">Email <img class="noborder" src="img/email.gif"  style="margin-left:41px;margin-top:6px;margin-bottom:-13px;"/></li>
+		<li>Facebook: <a style='margin-left:38px;' href="http://www.facebook.com/johngrindall">John Grindall</a></li>
+		</ul>
+		
+	  
+	</script>
+	<!-- end text -->
+	
+	
+	<script type="text/template" id="tpl_advert">
+		 <div class="page-header" id="banner">
+        <div class="row">
+          
+		  
+		  
+		  
+		  <div class="col-lg-6">
+            <h1>Lumen</h1>
+            <p class="lead">Light and shadow</p>
+          </div>
+          <div class="col-lg-6" style="padding: 15px 15px 0 15px;">
+            <div class="well sponsor">
+              <a href="http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'treehouse']);" rel="nofollow" target="_blank">
+                <span style="float: left; margin-right: 15px;">
+                  <img src="http://srv.buysellads.com/direct/image/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'treehouse']);" width="175" height="135">
+                </span>
+              </a>
+              <a href="http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'treehouse']);" rel="nofollow" target="_blank">
+                <h4 style="margin-bottom: 0.4em;">Treehouse</h4>
+                <div class="clearfix">
+                  <p>Learn Web Design, Coding, Mobile App Development &amp; More.</p>
+                  <p>Start Learning for Free!</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	</script>
+	
+	
+	<!-- main -->
+	<script type="text/template" id="tpl_main">
+	
+		<div class="container">
+  
+		</div>
+
+	</script>
+	<!-- end main -->
+	
+	
+	
+	
+	
+	<script type="text/template" id="tpl_modaldialog">
+		 <div id="source-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Source Code</h4>
+            </div>
+            <div class="modal-body">
+              <pre></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	</script>
+	
+	
+	
+	
+	
+	<script type="text/template" id="tpl_footer">
+		<footer>
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+              <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
+              <li><a href="https://twitter.com/thomashpark">Twitter</a></li>
+              <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
+              <li><a href="../help/#api">API</a></li>
+              <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2">Donate</a></li>
+            </ul>
+            <p>Made by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+	</script>
+	
+	<script src="js/main-min.js"></script>
+	
+	
+  </body>
+</html>
+
+
+
