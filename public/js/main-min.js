@@ -1,19 +1,14 @@
 var App = {};
+/*
+
+// A global event dispatcher.
+// Backbone has its own internal events system, but use this object to dispatch an event that anyone can listen to
+// --------------------------
+
+*/
 
 
-App.MainView = Backbone.View.extend({
-	initialize:function(data){
-		this.render();
-	},
-	template:"tpl_main",
-	render:function(){
-		this.loadTemplate(this.template, {"message":"Hi"}, {replace:true} );
-		return this;
-	},
-	beforeClose:function(){
-		
-	}
-});
+App.EventDispatcher =  _.extend(  {}, Backbone.Events);
 
 
 
@@ -173,36 +168,309 @@ Backbone.View.prototype.loadTemplate = function (id, data, options) {
 App.Router = Backbone.Router.extend({
 	
     routes:{
-		""									:	"main",
-		"main"								:	"main"
+		""									:	"home",
+		"home"								:	"home",
+		"work"								:	"work",
+		"other"								:	"other",
+		"contact"							:	"contact"
     },
 	initialize:function () {
 		// this.page is the current page that's shown.
 		this.page = null;
     },
-	main:function(){
-		var v = new App.MainView( );
-		this.changePage(v);
+	home:function(){
+		var v = new App.HomePageView( );
+		this.changePage(v, 0);
 	},
-    changePage:function (page, analyticsData) {
+	other:function(){
+		var v = new App.OtherPageView( );
+		this.changePage(v, 2);
+	},
+	contact:function(){
+		var v = new App.ContactPageView( );
+		this.changePage(v, 3);
+	},
+	work:function(){
+		var v = new App.WorkPageView( );
+		this.changePage(v, 1);
+	},
+   changePage:function (page, index) {
 		if(this.page){
 			this.page.close();
+			$('#container').empty();
 		}
 		$('#container').append(page.$el);
 		this.page = page;
 		if(this.page.afterAdded){
 			this.page.afterAdded();
 		}
+		App.headerModel.set({"shown":index});
     }
 });
 
 
-
+App.create = function(){
+	App.headerModel = new App.HeaderModel();
+	App.headerView = new App.HeaderView({"model":App.headerModel});
+	$("body").append(App.headerView.$el);
+};
 
 App.init = function(){
+	App.create();
 	App.router = new App.Router();
 	Backbone.history.start();
 };
 
 $(document).ready(App.init);
+
+
+App.HeaderModel = Backbone.Model.extend({
+	defaults:{
+		"shown":0
+	},
+	sync:function(){
+	
+	}
+});
+
+
+
+
+App.HomePageView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_homepage",
+	addChildren:function(){
+		this.v1 = new App.IntroView();
+		this.v2 = new App.WorkBoxView();
+		this.v3 = new App.AboutBoxView();
+		this.v4 = new App.FooterView();
+		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el).append(this.v4.$el);
+	},
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		this.addChildren();
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+
+App.WorkPageView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_workpage",
+	addChildren:function(){
+		this.v1 = new App.WorkView();
+		this.v2 = new App.ButtonsView();
+		this.$(".page-header").append(this.v1.$el).append(this.v2.$el);
+	},
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		this.addChildren();
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+
+App.OtherPageView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_otherpage",
+	addChildren:function(){
+		
+	},
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		this.addChildren();
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+
+App.ContactPageView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_contactpage",
+	addChildren:function(){
+		
+	},
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		this.addChildren();
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+
+App.TextView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_text",
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+App.WorkView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_work",
+	
+	render:function(){
+		this.loadTemplate(this.template, {"message":"Hi"}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+
+App.IntroView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_intro",
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+App.FooterView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_footer",
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+App.AboutBoxView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_aboutbox",
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+App.HeaderView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+		this.model = data.model;
+		this.listenTo(this.model, "change", this.changeSelected, this);
+	},
+	template:"tpl_header",
+	changeSelected:function(){
+		var s, i = this.model.get("shown");
+		this.$("li").removeClass("active");
+		s = "li:nth-child(" + (i + 1) + ")";
+		this.$(s).addClass("active");
+	},
+	render:function(){
+		this.loadTemplate(this.template, this.model.toJSON(), {replace:true} );
+		this.changeSelected();
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+App.WorkBoxView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_workbox",
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
+App.ButtonsView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_buttons",
+	render:function(){
+		this.loadTemplate(this.template, {"message":"Hi"}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
 
