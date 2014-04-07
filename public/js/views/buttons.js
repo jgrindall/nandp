@@ -1,10 +1,10 @@
 
 
-App.MainView = Backbone.View.extend({
+App.ButtonsView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
 	},
-	template:"tpl_main",
+	template:"tpl_buttons",
 	render:function(){
 		this.loadTemplate(this.template, {"message":"Hi"}, {replace:true} );
 		return this;
@@ -13,4 +13,3 @@ App.MainView = Backbone.View.extend({
 		
 	}
 });
-

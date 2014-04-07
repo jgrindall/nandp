@@ -2,25 +2,42 @@
 App.Router = Backbone.Router.extend({
 	
     routes:{
-		""									:	"main",
-		"main"								:	"main"
+		""									:	"home",
+		"home"								:	"home",
+		"work"								:	"work",
+		"other"								:	"other",
+		"contact"							:	"contact"
     },
 	initialize:function () {
 		// this.page is the current page that's shown.
 		this.page = null;
     },
-	main:function(){
-		var v = new App.MainView( );
-		this.changePage(v);
+	home:function(){
+		var v = new App.HomePageView( );
+		this.changePage(v, 0);
 	},
-    changePage:function (page, analyticsData) {
+	other:function(){
+		var v = new App.OtherPageView( );
+		this.changePage(v, 2);
+	},
+	contact:function(){
+		var v = new App.ContactPageView( );
+		this.changePage(v, 3);
+	},
+	work:function(){
+		var v = new App.WorkPageView( );
+		this.changePage(v, 1);
+	},
+   changePage:function (page, index) {
 		if(this.page){
 			this.page.close();
+			$('#container').empty();
 		}
 		$('#container').append(page.$el);
 		this.page = page;
 		if(this.page.afterAdded){
 			this.page.afterAdded();
 		}
+		App.headerModel.set({"shown":index});
     }
 });
