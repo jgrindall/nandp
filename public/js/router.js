@@ -4,6 +4,7 @@ App.Router = Backbone.Router.extend({
     routes:{
 		""									:	"home",
 		"home"								:	"home",
+		"work/:n"							:	"work",
 		"work"								:	"work",
 		"other"								:	"other",
 		"contact"							:	"contact"
@@ -24,8 +25,8 @@ App.Router = Backbone.Router.extend({
 		var v = new App.ContactPageView( );
 		this.changePage(v, 3);
 	},
-	work:function(){
-		var v = new App.WorkPageView( );
+	work:function(n){
+		var v = new App.WorkPageView( {"scrollTo":n} );
 		this.changePage(v, 1);
 	},
    changePage:function (page, index) {

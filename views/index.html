@@ -2,92 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Title</title>
+		<title>Numbers & Pictures Ltd</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="bootstrap/css/bootstrap-lightbox.min.css">
+		<link rel="stylesheet" href="css/styles.css">
 		
 		<script src="libs/jquery-1.9.1.js"></script>
 		<script src="libs/underscore-1.4.4.js"></script>
 		<script src="libs/backbone-1.0.0.js"></script>
+		<script src="libs/jquery.scrollTo.min.js"></script>
+		
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script src="bootstrap/js/bootstrap-lightbox.min.js"></script>
-		
-		
-		<style>
-			.container > .page-header{
-				margin-top:95px;
-			}
-			#videos{
-				padding-top:40px;
-			}
-			#intro{
-				margin-top:20px;
-			}
-			#workbox{
-				padding-top:40px;
-			}
-			#intro p{
-				font-size:15px;
-				text-align:justify;
-				margin: 15px;
-			}
-			#workbox p{
-				text-align:justify;
-				margin: 10px;
-			}
-			#videos span.glyphicon{
-				font-size: 70px;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				color:#eee;
-				opacity:0.5;
-				margin-left: -29px;
-				margin-top: -38px;
-				cursor:pointer;
-				cursor:hand;
-			}
-			#videos span.glyphicon:hover{
-				opacity:0.9;
-				color:#aaa;
-			}
-			#videos img, #work img{
-				width:100%;
-				cursor:pointer;
-				cursor:hand;
-			}
-			#videos #logos img{
-				margin-top:8px;
-				margin-bottom:8px;
-				width:100%;
-			}
-			#videos #logos img:not(:nth-child(1)),#videos #logos img:not(:nth-child(2)){
-				width:80%;
-				margin-left:10%;
-			}
-			
-			.navbar .navbar-brand{
-				height:82px;
-			}
-			.navbar .navbar-brand span{
-				margin-left: 10px;
-			}
-			ul.navbar-nav{
-				margin-top: 19px;
-			}
-			#work{
-				margin-top:95px;
-			}
-			#work .col-lg-4 img{
-				width:100%;
-				margin:10px;
-			}
-			ul.features li{
-				padding:4px;
-			}
-		</style>
 		
 		
 		<script type="text/template" id="tpl_header">
@@ -119,8 +45,17 @@
 							  <a href="#">Home</a>
 							</li>
 							
-							<li>
-							  <a href="#work">Portfolio</a>
+							<li class="dropdown">
+							  <a class="dropdown-toggle" data-toggle="dropdown" href="#work" id="portfolio">Portfolio <span class="caret"></span></a>
+								<ul class="dropdown-menu" aria-labelledby="portfolio">
+									<li><a href="#work/1">HeyMath! from Singapore</a></li>
+									<li><a href="#work/2">fasTest</a></li>
+									<li><a href="#work/3">HotTopics</a></li>
+									<li><a href="#work/4">Create and Display / Data Handling</a></li>
+									<li><a href="#work/5">Return to Mechania</a></li>
+									<li><a href="#work/6">Shockwaves</a></li>
+									<li><a href="#work/7">Mary Glasgow magazines & Maths Readers</a></li>
+								</ul>
 							</li>
 							
 							<li>
@@ -130,7 +65,7 @@
 							<li>
 							  <a href="#contact">My resum&eacute; / contact</a>
 							</li>
-			  
+							
 						</ul>
 
 					</div>
@@ -142,52 +77,6 @@
 		</script>
 		
 		
-		
-		
-		
-		<script type="text/template" id="tpl_buttons">
-			
-			<div class="bs-docs-section">
-			
-				<div class="row">
-					
-					<div class="col-lg-6">
-
-						<div>
-						
-							<div class="btn-toolbar bs-component">
-					  
-								<div class="btn-group">
-									
-									<button type="button" class="btn btn-primary">Primary</button>
-									
-									<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-										<span class="caret"></span>
-									</button>
-						  
-									<ul class="dropdown-menu">
-										
-										<li><a href="#">Action</a></li>
-										<li><a href="#">Another action</a></li>
-										<li><a href="#">Something else here</a></li>
-										<li class="divider"></li>
-										<li><a href="#">Separated link</a></li>
-									
-									</ul>
-								
-								</div>
-
-							</div>
-						
-						</div>
-
-					</div>
-
-				</div>
-			
-			</div>
-
-		</script>
 		
 		
 		
@@ -368,9 +257,9 @@
 		
 		
 		
-		<script type="text/template" id="tpl_aboutbox">
+		<script type="text/template" id="tpl_other1">
 			
-			<div class="row" style="padding-top:40px;">
+			<div class="row">
 				
 				<div class="col-lg-7">
 						
@@ -508,13 +397,13 @@
 		
 		<script type="text/template" id="tpl_footer">
 			
-			<div class="row">
+			<div class="row" >
 			
 				<div class="col-lg-12">
 					
 					<div class="bs-component">
 				  
-						<p style="text-align: center;font-size: 85%;margin-top:50px;">This website is based on the free <a href="http://bootswatch.com/lumen/">Lumen bootstrap theme</a>, uses <a href="http://backbonejs.org/">backbone.js</a>, and is hosted with a <a href="http://nodejs.org/">node.js</a> server on <a href="https://dashboard.heroku.com/apps">heroku.com</a></p>
+						<p >This website is based on the free <a href="http://bootswatch.com/lumen/">Lumen bootstrap theme</a>, uses <a href="http://backbonejs.org/">backbone.js</a>, and is hosted with a <a href="http://nodejs.org/">node.js</a> server on <a href="https://dashboard.heroku.com/apps">heroku.com</a></p>
 						
 					</div>
 			  
@@ -526,467 +415,676 @@
 		
 		
 		
-		
-		
-		
-		<script type="text/template" id="tpl_work">
+		<script type="text/template" id="tpl_work1">
 			
-			<div class="page-header" id="work" >
-				
-				
-				<div class="row">
+			<div class="row">
 			
-					<div class="col-lg-12">
-						
-						<div class="panel panel-success">
+				<div class="col-lg-12">
 					
-							<div class="panel-heading">
-								<h3 class="panel-title">HeyMath! from Singapore</h3>
-							</div>
+					<div class="panel panel-success">
 				
-							<div class="panel-body">
-								
-								
-								<div class="col-lg-12">
-									<p>
-										HeyMath! from Singapore is an iPad app built using backbone.js and wrapped with phonegap/cordova.
-									</p>
-									
-									<p>
-										Its purpose is to bring the the internationally successful "Singapore Math" curriculum to the iPad, using colorful animated videos and adaptive practice tests.
-										Grades 3 - 8 are covered, each grade containing a number of topics, and each topic containing a suite of animated video lessons and practice questions.
-									</p>
-										
-										
-									<p>
-										Features:
-									</p>
-
-									<ul class="features">
-										
-										<li><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></li>	
-										<li>Subscriptions (IAP)</li>	
-										<li>Multiuser</li>	
-										<li>Search screen</li>	
-										<li>Search screen</li>	
-										<li>Search screen</li>	
-										<li>Search screen</li>	
-										<li>Search screen</li>	
-									</ul>
-									
-								</div>
-								
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/hmfs/slide1.png" ><img src="img/slide/hmfs/slide1.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hmfs/slide3.png" ><img src="img/slide/hmfs/slide3.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hmfs/slide4.png" ><img src="img/slide/hmfs/slide4.png" /></a>
-									</div>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/hmfs/slide5.png" ><img src="img/slide/hmfs/slide5.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hmfs/slide7.png" ><img src="img/slide/hmfs/slide7.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hmfs/slide8.png" ><img src="img/slide/hmfs/slide8.png" /></a>
-									</div>
-								</div>
-								
-									
-								
-							</div>
-						
+						<div class="panel-heading">
+							<h3 class="panel-title">HeyMath! from Singapore</h3>
 						</div>
-					
-					</div>
-				
-				</div>
-				
-				
-				<div class="row">
 			
-					<div class="col-lg-12">
-						
-						<div class="panel panel-danger">
-					
-							<div class="panel-heading">
-								<h3 class="panel-title">fasTest</h3>
-							</div>
-				
-							<div class="panel-body">
+						<div class="panel-body">
 							
-								<div class="col-lg-12">
-									<p>fastTest </p>
-								</div>
+							<div class="col-lg-12">
+								<p>
+									HeyMath! from Singapore is an iPad app built using backbone.js and wrapped with phonegap/cordova.
+								</p>
 								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/fastest/slide1.png" ><img src="img/slide/fastest/slide1.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/fastest/slide2.png" ><img src="img/slide/fastest/slide2.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/fastest/slide3.png" ><img src="img/slide/fastest/slide3.png" /></a>
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/fastest/slide4.png" ><img src="img/slide/fastest/slide4.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/fastest/slide5.png" ><img src="img/slide/fastest/slide5.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/fastest/slide6.png" ><img src="img/slide/fastest/slide6.png" /></a>
-									</div>
-								</div>
-								
+								<p>
+									Its purpose is to bring the the internationally successful "Singapore Math" curriculum to the iPad, using colorful animated videos and adaptive practice tests.
+									Grades 3 - 8 are covered, each grade containing a number of topics, and each topic containing a suite of animated video lessons and practice questions.
+								</p>
 								
 							</div>
-						
-						</div>
-					
-					</div>
-				
-				</div>
-				
-				
-				
-				
-				<div class="row">
-			
-					<div class="col-lg-12">
-						
-						<div class="panel panel-primary">
-					
-							<div class="panel-heading">
-								<h3 class="panel-title">Hot Topics</h3>
-							</div>
-				
-							<div class="panel-body">
-								
-								<div class="col-lg-12">
-									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide8.png" ><img src="img/slide/hottopics/slide8.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide2.png" ><img src="img/slide/hottopics/slide2.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide3.png" ><img src="img/slide/hottopics/slide3.png" /></a>
-									</div>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide7.png" ><img src="img/slide/hottopics/slide7.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide1.png" ><img src="img/slide/hottopics/slide1.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide6.png" ><img src="img/slide/hottopics/slide6.png" /></a>
-									</div>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide11.png" ><img src="img/slide/hottopics/slide11.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide4.png" ><img src="img/slide/hottopics/slide4.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/hottopics/slide9.png" ><img src="img/slide/hottopics/slide9.png" /></a>
-									</div>
-								</div>
-								
-								
-								
-							</div>
-						
-						</div>
-					
-					</div>
-				
-				</div>
-				
-				
-				<div class="row">
-			
-					<div class="col-lg-12">
-						
-						<div class="panel panel-warning">
-					
-							<div class="panel-heading">
-								<h3 class="panel-title">Scholastic Create and Display & Data handling</h3>
-							</div>
-				
-							<div class="panel-body">
-								
-								
-								<div class="col-lg-12">
-									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
-								</div>
-								
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/datahandling/slide4.png" ><img src="img/slide/datahandling/slide4.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/createanddisplay/slide4.png" ><img src="img/slide/createanddisplay/slide4.png" /></a>
-										
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/createanddisplay/slide2.png" ><img src="img/slide/createanddisplay/slide2.png" /></a>
-									</div>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/datahandling/slide3.png" ><img src="img/slide/datahandling/slide3.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/datahandling/slide1.png" ><img src="img/slide/datahandling/slide1.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/datahandling/slide2.png" ><img src="img/slide/datahandling/slide2.png" /></a>
-									</div>
-								</div>
-								
-							</div>
-						
-						</div>
-					
-					</div>
-				
-				</div>
-				
-				
-				
-				
-				<div class="row">
-			
-					<div class="col-lg-12">
-						
-						<div class="panel panel-info">
-					
-							<div class="panel-heading">
-								<h3 class="panel-title">Return to Mechania</h3>
-							</div>
-				
-							<div class="panel-body">
-								
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide1.png" ><img src="img/slide/rtm/slide6.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide7.png" ><img src="img/slide/rtm/slide7.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide4.png" ><img src="img/slide/rtm/slide4.png" /></a>
-									</div>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide12.png" ><img src="img/slide/rtm/slide12.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide13.png" ><img src="img/slide/rtm/slide13.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide1.png" ><img src="img/slide/rtm/slide1.png" /></a>
-									</div>
-								</div>
-								
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide10.png" ><img src="img/slide/rtm/slide10.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide8.png" ><img src="img/slide/rtm/slide8.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/rtm/slide11.png" ><img src="img/slide/rtm/slide11.png" /></a>
-									</div>
-								</div>
-								
-								
-								
-								<div class="col-lg-12">
-									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
-								</div>
-								
-								
-							</div>
-						
-						</div>
-					
-					</div>
-				
-				</div>
-				
-				
-				
-				
-				<div class="row">
-			
-					<div class="col-lg-12">
-						
-						<div class="panel panel-success">
-					
-							<div class="panel-heading">
-								<h3 class="panel-title">Scholastic Shockwaves</h3>
-							</div>
-				
-							<div class="panel-body">
-								
-								<div class="col-lg-12">
-									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/shockwaves/slide1.png" ><img src="img/slide/shockwaves/slide5.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/shockwaves/slide2.png" ><img src="img/slide/shockwaves/slide2.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/shockwaves/slide4.png" ><img src="img/slide/shockwaves/slide4.png" /></a>
-									</div>
-								</div>
-								
-								<div class="col-lg-12">
-									<div class="col-lg-4">
-										<a href="img/slide/shockwaves/slide6.png" ><img src="img/slide/shockwaves/slide6.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/shockwaves/slide5.png" ><img src="img/slide/shockwaves/slide5.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/shockwaves/slide7.png" ><img src="img/slide/shockwaves/slide7.png" /></a>
-									</div>
-								</div>
-								
-								
-								
-							</div>
-						
-						</div>
-					
-					</div>
-				
-				</div>
-				
-				
-				
-				
-				<div class="row">
-			
-					<div class="col-lg-12">
-						
-						<div class="panel panel-danger">
-					
-							<div class="panel-heading">
-								<h3 class="panel-title">Mary Glasgow magazines & Scholastic Maths readers</h3>
-							</div>
-				
-							<div class="panel-body">
-								
-								<div class="col-lg-12">
-									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
-								</div>
-								
-								
-								<div class="col-lg-12">
+							
+							<div class="col-lg-7">
+							
+								<ul class="features">
 									
-									<div class="col-lg-4">
-										<a href="img/slide/maryg/slide2.png" ><img src="img/slide/maryg/slide2.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/maryg/slide3.png" ><img src="img/slide/maryg/slide3.png" /></a>
-									</div>
-									<div class="col-lg-4">
-										<a href="img/slide/mathsreaders/slide1.png" ><img src="img/slide/mathsreaders/slide1.png" /></a>
-									</div>
-								</div>
-								
-								
+									<li>Core MVC framework - backbone.js</li>
+									<li>Built using less, fontAwesome, ant, and version control by git</li>
+									<li>One code-base with polymorphism for both web and iPad versions</li>	
+									<li>Responsive design</li>
+									<li>Multiuser (4 users)</li>
+									<li>Search screen</li>
+									<li>In App Purchases (non-renewing subscriptions, using a <a href="https://github.com/j3k0/PhoneGap-InAppPurchase-iOS" target="_blank">phonegap plugin</a>)</li>	
+									<li>I did not create the videos or practice questions</li>	
+									<li>I gave specifications for, but did not code the backend API (Java)</li>	
+									<li>My basic backbone.js structure is found here</li>	
+									<li><a href="https://itunes.apple.com/us/app/heymath!-from-singapore/id723299509?mt=8" target="_blank">Available on the Apple App Store</a></li>
+									
+								</ul>
 								
 							</div>
-						
+							
+							<div class="col-lg-5">
+							
+								<div class="bs-component" style="margin-top:30px;">
+								  
+									<blockquote>
+										
+										<p>Educational software company HeyMath! today announced the launch of "HeyMath! from Singapore"&hellip; HeyMath!, an official Partner of the Academy of Singapore Teachers, with 12 years of experience working with some of the top schools in Singapore, brings to the iPad a large video lesson bank and adaptive practice modules for each topic</p>
+										<small><a href="http://www.prlog.org/12264344-heymath-brings-singapores-highly-successful-math-curriculum-to-the-ipad.html" target="_blank">http://www.prlog.org</a></small>
+										
+									</blockquote>
+									
+								</div>
+								
+								<a href="https://itunes.apple.com/us/app/heymath!-from-singapore/id723299509?mt=8" target="_blank"><img style="width:160px;" src="img/logo/app_store_badge.png"/></a>
+							
+							</div>
+							
+							<div class="col-lg-12">
+								
+								<div class="col-lg-4">
+									<a href="img/slide/hmfs/slide1.png" ><img src="img/slide/hmfs/slide1.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hmfs/slide3.png" ><img src="img/slide/hmfs/slide3.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hmfs/slide4.png" ><img src="img/slide/hmfs/slide4.png" /></a>
+								</div>
+								
+							</div>
+							
+							<div class="col-lg-12">
+								
+								<div class="col-lg-4">
+									<a href="img/slide/hmfs/slide5.png" ><img src="img/slide/hmfs/slide5.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hmfs/slide7.png" ><img src="img/slide/hmfs/slide7.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hmfs/slide8.png" ><img src="img/slide/hmfs/slide8.png" /></a>
+								</div>
+								
+							</div>
+							
 						</div>
 					
 					</div>
 				
 				</div>
-				
-			</div>
 			
-
+			</div>
+				
 		</script>
 		
 		
 		
-		<script type="text/template" id="tpl_otherpage">
 		
-			<div class="container">
+		<script type="text/template" id="tpl_work2">
 			
-				<div class="page-header" >
+			<div class="row">
+			
+				<div class="col-lg-12">
 					
-					
+					<div class="panel panel-danger">
 				
-					<div class="row">
-					
-						<div class="col-lg-6">
-							
-							<div class="bs-component">
-						  
-								<blockquote>
+						<div class="panel-heading">
+							<h3 class="panel-title">fasTest</h3>
+						</div>
+			
+						<div class="panel-body">
+						
+							<div class="col-lg-12">
+								<p>fastTest is an adaptive assessment web application, designed for the web and iPad.</p>
+								<p>Teachers can create a test using HeyMath!'s external question bank, and issue it to students. They can also send hand-drawn notes at any time.</p>
+								<p>Students are given a room number, and they take the test. Teachers see the correct/incorrect responses in real time as the test progresses.</p>
+								<p>A report is given to teachers and students at the conclusion of the test.</p>
+								
+								<ul class="features">
 									
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-									<small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+									<li>Core MVC framework - backbone.js</li>
+									<li>Built using jQuery Mobile for the UI, less, fontAwesome and version control by git</li>
+									<li>Minimal jQM theme for performance on slower devices</li>
+									<li>Responsive design, designed for cheaper android tablets as well as the iPad.</li>
+									<li>Uses <a href="http://intridea.github.io/sketch.js/" target="_blank">sketch.js</a> with Flash (AS3) fallback for the sketching and <a href="http://xaviershay.github.io/tufte-graph/" target="_blank">TufteGraph</a> with <a href="http://g.raphaeljs.com/" target="_blank">Rapha&euml;l</a> fallback for the graphing libraries.</li>
+									<li>I helped design but did not code the backend (Java & mongodb)</li>	
+									<li><a href="http://www.heymath.com/apps/fastest.html" target="_blank">Find out more!</a></li>
 									
-								</blockquote>
-							
+								</ul>
+								
 							</div>
-					  
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/fastest/slide1.png" ><img src="img/slide/fastest/slide1.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/fastest/slide2.png" ><img src="img/slide/fastest/slide2.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/fastest/slide3.png" ><img src="img/slide/fastest/slide3.png" /></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/fastest/slide4.png" ><img src="img/slide/fastest/slide4.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/fastest/slide5.png" ><img src="img/slide/fastest/slide5.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/fastest/slide6.png" ><img src="img/slide/fastest/slide6.png" /></a>
+								</div>
+							</div>
+							
 						</div>
 					
 					</div>
+				
+				</div>
+			
+			</div>
+		
+		</script>
+		
+		
+		
+		
+		
+		
+		<script type="text/template" id="tpl_work3">
+			
+			<div class="row">
+		
+				<div class="col-lg-12">
 					
-					
-					
-					<div class="row">
-					
-						<div class="col-lg-12">
+					<div class="panel panel-primary">
+				
+						<div class="panel-heading">
+							<h3 class="panel-title">Hot Topics</h3>
+						</div>
+			
+						<div class="panel-body">
 							
-							<div class="bs-component">
+							<div class="col-lg-12">
+								
+								<p>Hot topics is a set of 9 CD-rom products to accompany a series of school textbooks. 
+								
+								Users are given a large set of ready-made slides (images, pdf worksheets, graphs, videos and audio files) and can drag and drop to create slideshows.</p>
+								
+								<p>Ready made slideshows are provided, and each slide can be annotated using drawing and text tools.</p>
+								
+							</div>
+							
+							<div class="col-lg-6">
+							
+								<ul class="features">
+									
+									<li>Built in AS3, using Flex and PureMVC</li>
+									<li>Wrapped with MDM Zinc to create installable executables</li>
+									<li>Windows and MacOSX compatible bundles</li>
+									<li>Search functionality and editable planning grid</li>
+									<li>Print, annotate slideshows and save your slideshows to disk as XML</li>
+									
+								</ul>
+								
+							</div>
+							
+							
+							
+							<div class="col-lg-6">
+							
+								<div class="bs-component" style="margin-top:30px;">
+								  
+									<blockquote>
+										
+										<p>You'll find a feast of interactive extras: 
+											over 100 images, two video clips and a song or piece of music on each CD-ROM. There are interactive slideshows to personalise and use in your own 
+											presentations and displays. You can also use the editable planning grid to work out your topic teaching schedule.
+											</p>
+
+										<small><a href="http://shop.scholastic.co.uk/series/848" target="_blank">http://shop.scholastic.co.uk/series/848</a></small>
+										
+									</blockquote>
+									
+								</div>
+							
+							</div>
+								
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide8.png" ><img src="img/slide/hottopics/slide8.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide2.png" ><img src="img/slide/hottopics/slide2.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide3.png" ><img src="img/slide/hottopics/slide3.png" /></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide7.png" ><img src="img/slide/hottopics/slide7.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide1.png" ><img src="img/slide/hottopics/slide1.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide6.png" ><img src="img/slide/hottopics/slide6.png" /></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide11.png" ><img src="img/slide/hottopics/slide11.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide4.png" ><img src="img/slide/hottopics/slide4.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/hottopics/slide9.png" ><img src="img/slide/hottopics/slide9.png" /></a>
+								</div>
+							</div>
+							
+						</div>
+					
+					</div>
 				
-								<h3>Power 4-in-a-row</h3>
+				</div>
+			
+			</div>
+			
+		</script>
+		
+		
+		
+		
+		<script type="text/template" id="tpl_work4">
+			
+			<div class="row">
+		
+				<div class="col-lg-12">
+					
+					<div class="panel panel-warning">
 				
-								<p>Power 4-in-a-row is a native Android app, written in Java.  It is based on Connect 4, but that name
-								is copyrighted. It is very similar to Connect 4 with the addition of a yellow power ball that either player can use to complete his/her line</p>
+						<div class="panel-heading">
+							<h3 class="panel-title">Scholastic Create and Display & Data handling</h3>
+						</div>
+			
+						<div class="panel-body">
+							
+							<div class="col-lg-12">
+								<p>These series extend the source code of the HotTopics project and add extra functionality.</p>
+							</div>
+
+							<div class="col-lg-6">
+							
+								<ul class="features">
+									
+									<li>Built in AS3, using Flex and PureMVC</li>
+									<li>Wrapped with MDM Zinc to create installable executables</li>
+									<li>Upload your own images into your slideshows</li>
+									<li>Inside any title installed on your computer, you can access all resources from any other title you have installed.</li>
+									<li>Suite of graph drawing tools provided in 'Data Handling' to allow users to create bar charts, line graphs, pie charts, pictograms.</li>
+									
+									
+								</ul>
+								
+							</div>
+							
+							
+							
+							<div class="col-lg-6">
+							
+								<div class="bs-component" style="margin-top:30px;">
+								  
+									<blockquote>
+										
+										<p>Each title contains lots of slideshows for the IWB, each based around a particular display or activity&hellip; 
+										
+										The software includes a full suite of Interactive Whiteboard tools, and lets the teacher adapt the slideshows,
+										
+										upload their own images, or even create entirely new slideshows of their classwork.
+										
+										There is a large image bank on each CD-ROM, as well as videos, planning grids,
+										
+										and activity sheets&hellip;
+										
+										Importantly, each title in the series adds to the main resource bank&hellip; allowing the user to use resources from every title to
+										
+										create and display exciting and engaging art presentations to their class!</p>
+								
+
+										<small><a href="http://shop.scholastic.co.uk/series/867" target="_blank">http://shop.scholastic.co.uk/series/867</a></small>
+										
+									</blockquote>
+									
+								</div>
+							
+							</div>								
+								
+							<div class="col-lg-12">
+							
+								<div class="col-lg-4">
+									<a href="img/slide/datahandling/slide4.png" ><img src="img/slide/datahandling/slide4.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/createanddisplay/slide4.png" ><img src="img/slide/createanddisplay/slide4.png" /></a>
+									
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/createanddisplay/slide2.png" ><img src="img/slide/createanddisplay/slide2.png" /></a>
+								</div>
+							
+							</div>
+							
+							<div class="col-lg-12">
+								
+								<div class="col-lg-4">
+									<a href="img/slide/datahandling/slide3.png" ><img src="img/slide/datahandling/slide3.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/datahandling/slide1.png" ><img src="img/slide/datahandling/slide1.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/datahandling/slide2.png" ><img src="img/slide/datahandling/slide2.png" /></a>
+								</div>
+								
+							</div>
+							
+						</div>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+			
+		</script>
+	
+	
+	
+		<script type="text/template" id="tpl_work5">
+			
+			<div class="row">
+		
+				<div class="col-lg-12">
+					
+					<div class="panel panel-info">
+				
+						<div class="panel-heading">
+							<h3 class="panel-title">Return to Mechania</h3>
+						</div>
+			
+						<div class="panel-body">
+							
+							<div class="col-lg-12">
+								<p>Return to Mechania is designed to teach pupils about simple machines and the concept of mechanincal advantage, in a variety of situations,
+								covering moments and balancing, different shaped cams, gears and gear ratios, pulleys, pneumatics and linkages.</p>
+								
+								<p>It is a pure AS3 project and contains 'adventure' and 'explore' modes. In the 'explore' mode pupils are given a machine and can interact with it as if it were real -
+								hang weights on a balancing bar, place a cam on a rotating axle, mesh gears together, load puilleys with weights and connect plasic syringes for example.</p>
+								
+								<p>Each exploration has a stripped down mathematical diagram view to see the essentials of the scenario (forces, weights and lengths for example)</p>
+								<p>The 'adventure' mode places each machine in a fantasy world of Mechania, where you must use your knowledge to help the Mechanians recover their kingdom!</p>
+							</div>
+							
+							<div class="col-lg-5">
+							
+								<ul class="features">
+									
+									<li>Built in AS3</li>
+									<li>Wrapped with MDM Zinc to create installable executables</li>
+									<li>Two levels of difficulty</li>
+									<li>'Explore' and 'Adventure' mode</li>
+									<li>All code and basic graphics created by myself, other artwork outsourced</li>
+									
+								</ul>
+								
+							</div>
+							
+							<div class="col-lg-7">
+							
+								<div class="bs-component" style="margin-top:30px;">
+								  
+									<blockquote>
+										
+										<p>Long ago, the kingdom of Mechania was know throughout the world for its citizens' skill with mechanisms and machines. 
+
+										But Mechania fell upon darker times and the citizens were banished. Now the time has come to return. 
+
+										The citizens will face many dangers along the way,and many puzzles must be solved.
+
+										 Can you help get their machines and mechanisms working again? The future is in the balance, 
+										 
+										 and in your hands&hellip;  Get your classs cross-curricular problem-solving cogs turning with this exciting new software.</p>
+								
+
+										<small><a href="http://shop.sherston.com/subject/other/mech-win-cdrm-1.html" target="_blank">http://shop.sherston.com/subject/other/mech-win-cdrm-1.html</a></small>
+										
+									</blockquote>
+									
+								</div>
+							
+							</div>								
+								
+							
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide1.png" ><img src="img/slide/rtm/slide6.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide7.png" ><img src="img/slide/rtm/slide7.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide4.png" ><img src="img/slide/rtm/slide4.png" /></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide12.png" ><img src="img/slide/rtm/slide12.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide13.png" ><img src="img/slide/rtm/slide13.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide1.png" ><img src="img/slide/rtm/slide1.png" /></a>
+								</div>
+							</div>
+							
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide10.png" ><img src="img/slide/rtm/slide10.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide8.png" ><img src="img/slide/rtm/slide8.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/rtm/slide11.png" ><img src="img/slide/rtm/slide11.png" /></a>
+								</div>
+							</div>
+							
+							+ video
+
+						</div>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+			
+		</script>
+		
+		
+		
+		<script type="text/template" id="tpl_work6">
+		
+			<div class="row">
+		
+				<div class="col-lg-12">
+					
+					<div class="panel panel-success">
+				
+						<div class="panel-heading">
+							<h3 class="panel-title">Scholastic Shockwaves</h3>
+						</div>
+			
+						<div class="panel-body">
+							
+							
+							<div class="col-lg-12">
+								<p>My own flipbook engine, written to create realistic page turning effects on-screen, used to create AS3 versions of paper books.</p>
+									
+							</div>
+														
+							<div class="col-lg-5">
+							
+								<ul class="features">
+									
+									<li>Built in AS3, using Zinc</li>
+									<li>Using <a href="http://www.swftools.org/pdf2swf.html" target="_blank">pdf2swf</a> to convert pdf to swf pages.</li>
+									<li>Clickable 'Hot spots' on each page link to interactive components - video, audio, pop up boxes</li>
+									<li>Fully searchable by keyword</li>
+									<li>Interactive elements to explore</li>
+									<li>Full annotation tools such as scribbling, highlighting and adding text boxes</li>
+									
+								</ul>
+								
+							</div>
+							
+							
+							<div class="col-lg-7">
+							
+								<div class="bs-component" style="margin-top:30px;">
+								  
+									<blockquote>
+										
+										<p>								
+										A digital version of 'Shockwave: Robotics' to share on the white board.
+										The whole book on screen with 'turning' pages.
+										Perfect for shared reading and digital literacy.
+										Embedded videos and animation.
+										Information in the book enhanced with pop up images and text.
+										Hovver over text to get the glossary definition.
+										Links to websites for further information.
+										Superb photography to engage your pupils.
+										In this book: a fascinating look at the futuristic world of robots.</p>
+										
+
+										<small><a href="http://shop.scholastic.co.uk/products/75483" target="_blank">http://shop.scholastic.co.uk/products/75483</a></small>
+										
+									</blockquote>
+									
+								</div>
+							
+							</div>								
+								
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/shockwaves/slide1.png" ><img src="img/slide/shockwaves/slide5.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/shockwaves/slide2.png" ><img src="img/slide/shockwaves/slide2.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/shockwaves/slide4.png" ><img src="img/slide/shockwaves/slide4.png" /></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-12">
+								<div class="col-lg-4">
+									<a href="img/slide/shockwaves/slide6.png" ><img src="img/slide/shockwaves/slide6.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/shockwaves/slide5.png" ><img src="img/slide/shockwaves/slide5.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/shockwaves/slide7.png" ><img src="img/slide/shockwaves/slide7.png" /></a>
+								</div>
+							</div>
+							
+						</div>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+			
+		</script>
+		
+		
+		
+		<script type="text/template" id="tpl_work7">
+			
+			<div class="row">
+		
+				<div class="col-lg-12">
+					
+					<div class="panel panel-danger">
+				
+						<div class="panel-heading">
+							<h3 class="panel-title">Mary Glasgow magazines & Scholastic Maths readers</h3>
+						</div>
+			
+						<div class="panel-body">
+							
+							<div class="col-lg-12">
+								<p>An extension of the flip book engine to create more flip books, containing more variety of interactive elements (drag and drop, MCQ), and
+								for younger children the maths reader engine includes auto-reading out of the text on each page.</p>
+							</div>
+							
+							<div class="col-lg-12">
+								
+								<div class="col-lg-4">
+									<a href="img/slide/maryg/slide2.png" ><img src="img/slide/maryg/slide2.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/maryg/slide3.png" ><img src="img/slide/maryg/slide3.png" /></a>
+								</div>
+								<div class="col-lg-4">
+									<a href="img/slide/mathsreaders/slide1.png" ><img src="img/slide/mathsreaders/slide1.png" /></a>
+								</div>
+							
+							</div>
+							
+						</div>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+			
+		</script>
+		
+		
+		
+		
+		<script type="text/template" id="tpl_other3">
+			
+					
+			<div class="row">
+			
+				<div class="col-lg-12">
+					
+					<div class="bs-component">
+						
+						<div class="panel panel-warning">
+						
+							<div class="panel-heading">
+								<h3 class="panel-title">Power 4-in-a-row</h3>
+							</div>
+				
+							<div class="panel-body">
+								
+								<p>Power 4-in-a-row is a native Android app, written in Java.  It is based on Connect 4, but with the addition of a yellow power ball that either player can use to complete his/her line</p>
 								
 								<img src="img/workother/connect4_screen.jpg" width="200"/>
 								
@@ -1016,25 +1114,60 @@
 									<li>AI</li>
 									
 								</ul>
-				
+								
+								<div class="btn-group">
+											
+									<button type="button" class="btn btn-primary">Primary</button>
+									
+									<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+						  
+									<ul class="dropdown-menu">
+										
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+									
+									</ul>
+								
+								</div>
+								
 							</div>
-							
+						
 						</div>
-					
+						
 					</div>
 					
-					
-					
-					
-					
-					<div class="row">
-					
-						<div class="col-lg-12">
-							
-							<div class="bs-component">
+				</div>
+			
+			</div>
 				
-								<h2>iChing</h2>
+			<!--flash stuff Msc, science sims, sam learning -->
+			
+		</script>
+		
+		
+		
+		
+		<script type="text/template" id="tpl_other2">
+			
+			<div class="row">
+					
+				<div class="col-lg-12">
+					
+					<div class="bs-component">
+		
+						<div class="panel panel-warning">
+						
+							<div class="panel-heading">
+								<h3 class="panel-title">iChing</h3>
+							</div>
 				
+							<div class="panel-body">
+								
 								<img src="img/workother/ching1.jpg" width="300"/>
 								<img src="img/workother/ching2.jpg"  width="300"/>
 								
@@ -1047,14 +1180,27 @@
 								<div class="gplay">
 									<p><a href="https://play.google.com/store/apps/details?id=com.jgrindall.android.connect4&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5qZ3JpbmRhbGwuYW5kcm9pZC5jb25uZWN0NCJd">Find it on Google Play</a></p>
 								</div>
-				
+								
 							</div>
 						
 						</div>
-				
+						
 					</div>
 				
-					<!--flash stuff Msc, science sims, sam learning -->
+				</div>
+		
+			</div>
+			
+		</script>
+		
+		
+		
+		
+		<script type="text/template" id="tpl_otherpage">
+		
+			<div class="container">
+			
+				<div class="page-header" id="other">
 					
 				</div>
 			
@@ -1069,7 +1215,7 @@
 		
 			<div class="container">
 			
-				<div class="page-header" >
+				<div class="page-header" id="work">
 				
 				</div>
 			

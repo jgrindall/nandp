@@ -1,0 +1,80 @@
+.container > .page-header{
+	margin-top:95px;
+}
+#videos{
+	padding-top:40px;
+}
+#intro{
+	margin-top:20px;
+}
+#workbox{
+	padding-top:40px;
+}
+#intro p{
+	font-size:15px;
+	text-align:justify;
+	margin: 15px;
+}
+#workbox p{
+	text-align:justify;
+	margin: 10px;
+}
+#videos span.glyphicon{
+	font-size: 70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color:#eee;
+	opacity:0.5;
+	margin-left: -29px;
+	margin-top: -38px;
+	cursor:pointer;
+	cursor:hand;
+}
+#videos span.glyphicon:hover{
+	opacity:0.9;
+	color:#aaa;
+}
+#videos img, #work img{
+	width:100%;
+	cursor:pointer;
+	cursor:hand;
+}
+#videos #logos img{
+	margin-top:8px;
+	margin-bottom:8px;
+	width:100%;
+}
+#videos #logos img:not(:nth-child(1)),#videos #logos img:not(:nth-child(2)){
+	width:80%;
+	margin-left:10%;
+}
+
+.navbar .navbar-brand{
+	height:82px;
+}
+.navbar .navbar-brand span{
+	margin-left: 10px;
+}
+ul.navbar-nav{
+	margin-top: 19px;
+}
+#work{
+	margin-top:95px;
+}
+#work .col-lg-4 img{
+	width:100%;
+	margin:10px;
+}
+ul.features li{
+	padding:4px;
+}
+blockquote {
+	font-size: 15px;
+	color: #888;
+}
+#footer p{
+	text-align: center;
+	font-size: 85%;
+	margin-top:20px;
+}

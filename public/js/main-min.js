@@ -170,6 +170,7 @@ App.Router = Backbone.Router.extend({
     routes:{
 		""									:	"home",
 		"home"								:	"home",
+		"work/:n"							:	"work",
 		"work"								:	"work",
 		"other"								:	"other",
 		"contact"							:	"contact"
@@ -190,8 +191,8 @@ App.Router = Backbone.Router.extend({
 		var v = new App.ContactPageView( );
 		this.changePage(v, 3);
 	},
-	work:function(){
-		var v = new App.WorkPageView( );
+	work:function(n){
+		var v = new App.WorkPageView( {"scrollTo":n} );
 		this.changePage(v, 1);
 	},
    changePage:function (page, index) {
@@ -212,7 +213,9 @@ App.Router = Backbone.Router.extend({
 App.create = function(){
 	App.headerModel = new App.HeaderModel();
 	App.headerView = new App.HeaderView({"model":App.headerModel});
-	$("body").append(App.headerView.$el);
+	$("body > #header").append(App.headerView.$el);
+	App.footerView = new App.FooterView();
+	$("body > #footer").append(App.footerView.$el);
 };
 
 App.init = function(){
@@ -244,9 +247,8 @@ App.HomePageView = Backbone.View.extend({
 	addChildren:function(){
 		this.v1 = new App.IntroView();
 		this.v2 = new App.WorkBoxView();
-		this.v3 = new App.AboutBoxView();
-		this.v4 = new App.FooterView();
-		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el).append(this.v4.$el);
+		this.v3 = new App.VideosView();
+		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el);
 	},
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );
@@ -264,13 +266,30 @@ App.HomePageView = Backbone.View.extend({
 
 App.WorkPageView = Backbone.View.extend({
 	initialize:function(data){
+		this.data = data;
 		this.render();
 	},
 	template:"tpl_workpage",
 	addChildren:function(){
-		this.v1 = new App.WorkView();
-		this.v2 = new App.ButtonsView();
-		this.$(".page-header").append(this.v1.$el).append(this.v2.$el);
+		this.v1 = new App.WorkView({"num":1});
+		this.v2 = new App.WorkView({"num":2});
+		this.v3 = new App.WorkView({"num":3});
+		this.v4 = new App.WorkView({"num":4});
+		this.v5 = new App.WorkView({"num":5});
+		this.v6 = new App.WorkView({"num":6});
+		this.v7 = new App.WorkView({"num":7});
+		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el).append(this.v4.$el).append(this.v5.$el).append(this.v6.$el).append(this.v7.$el);
+	},
+	afterAdded:function(){
+		this.scroll();
+	},
+	scroll:function(){
+		if(this.data.scrollTo && !isNaN(this.data.scrollTo)){
+			var target = this.$(".page-header > .row:nth-child("+this.data.scrollTo+")");
+			if(target && target.length >= 1){
+				$.scrollTo(target, 500);
+			}
+		}
 	},
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );
@@ -292,7 +311,10 @@ App.OtherPageView = Backbone.View.extend({
 	},
 	template:"tpl_otherpage",
 	addChildren:function(){
-		
+		this.v1 = new App.OtherView({"num":3});
+		this.v2 = new App.OtherView({"num":1});
+		this.v3 = new App.OtherView({"num":2});
+		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el);
 	},
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );
@@ -330,6 +352,23 @@ App.ContactPageView = Backbone.View.extend({
 
 
 
+App.VideosView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_videos",
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
+
 App.TextView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -349,12 +388,12 @@ App.TextView = Backbone.View.extend({
 
 App.WorkView = Backbone.View.extend({
 	initialize:function(data){
+		this.data = data;
+		this.template = "tpl_work" + data.num;
 		this.render();
 	},
-	template:"tpl_work",
-	
 	render:function(){
-		this.loadTemplate(this.template, {"message":"Hi"}, {replace:true} );
+		this.loadTemplate(this.template, {}, {replace:true} );
 		return this;
 	},
 	beforeClose:function(){
@@ -362,6 +401,24 @@ App.WorkView = Backbone.View.extend({
 	}
 });
 
+
+
+
+
+App.OtherView = Backbone.View.extend({
+	initialize:function(data){
+		this.data = data;
+		this.template = "tpl_other" + this.data.num;
+		this.render();
+	},
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
 
 
 

@@ -2,9 +2,10 @@
 
 App.OtherView = Backbone.View.extend({
 	initialize:function(data){
+		this.data = data;
+		this.template = "tpl_other" + this.data.num;
 		this.render();
 	},
-	template:"tpl_other",
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );
 		return this;
