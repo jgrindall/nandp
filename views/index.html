@@ -15,6 +15,80 @@
 		<script src="bootstrap/js/bootstrap-lightbox.min.js"></script>
 		
 		
+		<style>
+			.container > .page-header{
+				margin-top:95px;
+			}
+			#videos{
+				padding-top:40px;
+			}
+			#intro{
+				margin-top:20px;
+			}
+			#workbox{
+				padding-top:40px;
+			}
+			#intro p{
+				font-size:15px;
+				text-align:justify;
+				margin: 15px;
+			}
+			#workbox p{
+				text-align:justify;
+				margin: 10px;
+			}
+			#videos span.glyphicon{
+				font-size: 70px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				color:#eee;
+				opacity:0.5;
+				margin-left: -29px;
+				margin-top: -38px;
+				cursor:pointer;
+				cursor:hand;
+			}
+			#videos span.glyphicon:hover{
+				opacity:0.9;
+				color:#aaa;
+			}
+			#videos img, #work img{
+				width:100%;
+				cursor:pointer;
+				cursor:hand;
+			}
+			#videos #logos img{
+				margin-top:8px;
+				margin-bottom:8px;
+				width:100%;
+			}
+			#videos #logos img:not(:nth-child(1)),#videos #logos img:not(:nth-child(2)){
+				width:80%;
+				margin-left:10%;
+			}
+			
+			.navbar .navbar-brand{
+				height:82px;
+			}
+			.navbar .navbar-brand span{
+				margin-left: 10px;
+			}
+			ul.navbar-nav{
+				margin-top: 19px;
+			}
+			#work{
+				margin-top:95px;
+			}
+			#work .col-lg-4 img{
+				width:100%;
+				margin:10px;
+			}
+			ul.features li{
+				padding:4px;
+			}
+		</style>
+		
 		
 		<script type="text/template" id="tpl_header">
 			
@@ -24,7 +98,10 @@
 					
 					<div class="navbar-header">
 
-						<a href="../" class="navbar-brand" style="height:82px;"><img src="img/logo/logosmall.png"/><span style="margin-left: 10px;">Numbers & Pictures Ltd</span></a>
+						<a href="#" class="navbar-brand" >
+							<img src="img/logo/logosmall.png"/>
+							<span>Numbers & Pictures Ltd</span>
+						</a>
 							
 						<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
 							<span class="icon-bar"></span>
@@ -36,14 +113,14 @@
 					
 					<div class="navbar-collapse collapse" id="navbar-main">
 						
-						<ul class="nav navbar-nav" style="margin-top: 19px;">
+						<ul class="nav navbar-nav" >
 			   
 							<li>
 							  <a href="#">Home</a>
 							</li>
 							
 							<li>
-							  <a href="#work">My work</a>
+							  <a href="#work">Portfolio</a>
 							</li>
 							
 							<li>
@@ -76,9 +153,9 @@
 					
 					<div class="col-lg-6">
 
-						<div style="margin-bottom: 15px;">
+						<div>
 						
-							<div class="btn-toolbar bs-component" style="margin: 0;">
+							<div class="btn-toolbar bs-component">
 					  
 								<div class="btn-group">
 									
@@ -116,7 +193,7 @@
 		
 		<script type="text/template" id="tpl_intro">
 			
-			<div class="row">
+			<div class="row" id="intro">
 					
 					<div class="col-lg-1">
 					</div>
@@ -127,7 +204,8 @@
 							
 							<div class="alert alert-dismissable alert-success">
 								
-								<p style="font-size:15px;">
+								<p>
+								
 									Welcome to numbersandpictures.com!
 									
 									I'm John Grindall and I develop educational software.
@@ -136,7 +214,7 @@
 									
 								</p>
 									
-								<p style="font-size:15px;">
+								<p>
 								
 									I have worked in the field since 2002 and my clients include Scholastic publishing group, Sherston Education,
 								
@@ -150,7 +228,7 @@
 							
 					</div>
 					
-					<div class="col-lg-2" style="padding: 15px 15px 0 15px;">
+					<div class="col-lg-2 hidden-xs" style="padding: 15px 15px 0 15px;">
 							
 						<span style="float: right; margin-left: 20px;">
 							<img src="img/logo/dog.png" width="150">
@@ -166,11 +244,46 @@
 		</script>
 		
 		
+		<script type="text/template" id="tpl_videos">
+			
+			<div id="videos" class="row" >
+					
+				<div class="col-lg-5">
+					
+					<a href="https://www.youtube.com/watch?v=2CUSEMMwEDM" target="_blank">
+					<img src="img/video/video1.png"/>
+					<span class="glyphicon glyphicon-play"></span>
+					</a>
+					
+				</div>
+				
+				<div class="col-lg-5">
+					<a href="https://www.youtube.com/watch?v=oaKW7qtmbX0" target="_blank">
+					<img src="img/video/video2.png"/>
+					<span class="glyphicon glyphicon-play"></span> 
+					
+				</div>
+				
+				<div id="logos" class="col-lg-2">
+					
+					<img src="img/clients/schol1.gif"/>
+					<img src="img/clients/sherston.png"/>
+					<img src="img/clients/schol2.png"/>
+					<img src="img/clients/hey.png"/>
+					 
+				
+				</div>
+				
+				
+			</div>
+			
+		</script>
+		
 		
 		
 		<script type="text/template" id="tpl_workbox">
 			
-			<div class="row" style="padding-top:40px;">
+			<div id="workbox" class="row">
 					
 				<div class="col-lg-5">
 						
@@ -178,7 +291,7 @@
 						
 						<div class="carousel-inner">
 							
-							<div class="item active">  		<img src="img/slide/hmfs/slide2.png" />					</div>
+							<div class="item active">  	<img src="img/slide/hmfs/slide2.png" />					</div>
 							<div class="item">  		<img src="img/slide/datahandling/slide4.png" />			</div>
 							<div class="item">  		<img src="img/slide/fastest/slide2.png" />				</div>
 							<div class="item">  		<img src="img/slide/hottopics/slide2.png" />			</div>
@@ -217,7 +330,7 @@
 					<div class="panel panel-primary">
 					
 						<div class="panel-heading">
-							<h3 class="panel-title">My work</h3>
+							<h3 class="panel-title">Portfolio</h3>
 						</div>
 			
 						<div class="panel-body">
@@ -238,7 +351,7 @@
 								I am particularly interested in maths education and programming and I work in Actionscript, Javascript and Android although I can also develop in Java, HTML5/CSS and PHP.
 							</p>
 							
-							<a href="#work" style="float: right;" class="btn btn-primary">My work  <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<a href="#work" style="float: right;" class="btn btn-primary btn-lg">More  <span class="glyphicon glyphicon-chevron-right"></span></a>
 							
 						</div>
 					
@@ -252,13 +365,6 @@
 		
 		
 		
-		<div id="demoLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
-			<div class='lightbox-content'>
-				<img src="img/slide/hmfs/slide1.png">
-				<div class="lightbox-caption"><p>Your caption here</p></div>
-			</div>
-		</div>
-
 		
 		
 		
@@ -291,7 +397,7 @@
 								I have also taught maths as a private tutor, mostly A-Level and IB maths but everything from GCSE up to STEP (the Cambridge University entrance exam for maths).
 							</p>
 					
-							<a href="#work" class="btn btn-warning">Other projects </a>
+							<a href="#work" class="btn btn-warning btn-lg">Other projects </a>
 							
 						</div>
 					
@@ -403,33 +509,13 @@
 		<script type="text/template" id="tpl_footer">
 			
 			<div class="row">
-				
-				<div class="col-lg-6">
-					
-					<div class="bs-component">
-				  
-						<blockquote>
-							
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-							<small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-							
-						</blockquote>
-					
-					</div>
-			  
-				</div>
-			 
-			</div>
-			
-			
-			<div class="row">
 			
 				<div class="col-lg-12">
 					
 					<div class="bs-component">
 				  
-						<p style="text-align: center;font-size: 85%;">This website is based on the free <a href="http://bootswatch.com/lumen/">Lumen bootstrap theme</a>, uses <a href="http://backbonejs.org/">backbone.js</a>, and is hosted with a <a href="http://nodejs.org/">node.js</a> server on <a href="https://dashboard.heroku.com/apps">heroku.com</a></p>
-					
+						<p style="text-align: center;font-size: 85%;margin-top:50px;">This website is based on the free <a href="http://bootswatch.com/lumen/">Lumen bootstrap theme</a>, uses <a href="http://backbonejs.org/">backbone.js</a>, and is hosted with a <a href="http://nodejs.org/">node.js</a> server on <a href="https://dashboard.heroku.com/apps">heroku.com</a></p>
+						
 					</div>
 			  
 				</div>
@@ -445,198 +531,415 @@
 		
 		<script type="text/template" id="tpl_work">
 			
-			<div class="page-header" style="margin-top:95px;">
-			
+			<div class="page-header" id="work" >
+				
+				
 				<div class="row">
 			
 					<div class="col-lg-12">
 						
-						<div class="bs-component">
-			
-							<h2>Flipbooks</h2>
-							
-							<a href="img/work/book1_1.jpg" ><img src="img/work/S_book1_1.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/book1_2.jpg" ><img src="img/work/S_book1_2.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/book2_1.jpg" ><img src="img/work/S_book2_1.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/book2_2.jpg" ><img src="img/work/S_book2_2.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/book3_1.jpg" ><img src="img/work/S_book3_1.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/b1.jpg" ><img src="img/work/b1.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/b2.jpg" ><img src="img/work/b2.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/b3.jpg" ><img src="img/work/b3.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a>
-							
-						</div>
+						<div class="panel panel-success">
 					
-					</div>
-				
-				</div>
-				
-				
-				
-				<div class="row">
-			
-					<div class="col-lg-12">
-						
-						<div class="bs-component">
-				
-							<h2>Hot Topics</h2>
-			
-							<a href="img/work/Clipboard02.jpg" ><img src="img/work/S_Clipboard02.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/Clipboard04.jpg" ><img src="img/work/S_Clipboard04.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/Clipboard06.jpg" ><img src="img/work/S_Clipboard06.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/Clipboard07.jpg" ><img src="img/work/S_Clipboard07.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/img1.jpg" ><img src="img/work/S_img1.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/ht1.jpg" ><img src="img/work/ht1.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							
-							<a href="img/work/ht2.jpg" ><img src="img/work/ht2.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/ht3.jpg" ><img src="img/work/ht3.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-						
-						</div>
-						
-					</div>
-			
-				</div>
-				
-				
-				<div class="row">
-				
-					<div class="col-lg-12">
-						
-						<div class="bs-component">
-			
-							<h2>Return to Mechania</h2>
-							
-							<a href="img/work/large_1.jpg" ><img src="img/work/small_1.jpg" width="200" class=" thumbsmall"/></a>
-							<a href="img/work/large_2.jpg" ><img src="img/work/small_2.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/large_3.jpg" ><img src="img/work/small_3.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/large_4.jpg" ><img src="img/work/small_4.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/large_5.jpg" ><img src="img/work/small_5.jpg" class=" thumbsmall"/></a>
-							<a href="img/work/large_6.jpg" ><img src="img/work/small_6.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-							
-							<a href="img/work/large_7.jpg" ><img src="img/work/small_7.jpg" class=" thumbsmall"/></a>
-							
-							<a href="img/work/large_9.jpg" ><img src="img/work/small_9.jpg" class=" thumbsmall"/></a>
-							
-							<div class="clear"></div>
-			
-						</div>
-					
-					</div>
-			
-				</div>
-			
-			
-			
-			
-				<div class="row">
-				
-					<div class="col-lg-12">
-						
-						<div class="bs-component">
-			
-							<h3>Power 4-in-a-row</h3>
-			
-							<p>Power 4-in-a-row is a native Android app, written in Java.  It is based on Connect 4, but that name
-							is copyrighted. It is very similar to Connect 4 with the addition of a yellow power ball that either player can use to complete his/her line</p>
-							
-							<img src="img/workother/connect4_screen.jpg" width="200"/>
-							
-							<img src="img/workother/connect4_screen2.jpg"  width="200"/>
-							
-							<img src="img/workother/connect4_screen3.jpg"  width="200"/>
-							
-							<div class="clear"></div>
-							
-							<div class="gitsrc">
-								<p><a href="https://github.com/jgrindall/Android-Power-4-in-a-row">Source code (github)</a></p>
+							<div class="panel-heading">
+								<h3 class="panel-title">HeyMath! from Singapore</h3>
 							</div>
-							
-							<div class="gplay">
-								<p><a href="https://play.google.com/store/apps/details?id=com.jgrindall.android.connect4&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5qZ3JpbmRhbGwuYW5kcm9pZC5jb25uZWN0NCJd">Find it on Google Play</a></p>
-							</div>
-							
-							<p>Features:</p>
-							
-							<ul style="margin-left:80px;">
+				
+							<div class="panel-body">
 								
-								<li>One or two player</li>
-								<li>Three levels of difficulty</li>
-								<li>Optional powerball</li>
-								<li>Native android app</li>
-								<li>Undo</li>
-								<li>AI</li>
 								
-							</ul>
-			
+								<div class="col-lg-12">
+									<p>
+										HeyMath! from Singapore is an iPad app built using backbone.js and wrapped with phonegap/cordova.
+									</p>
+									
+									<p>
+										Its purpose is to bring the the internationally successful "Singapore Math" curriculum to the iPad, using colorful animated videos and adaptive practice tests.
+										Grades 3 - 8 are covered, each grade containing a number of topics, and each topic containing a suite of animated video lessons and practice questions.
+									</p>
+										
+										
+									<p>
+										Features:
+									</p>
+
+									<ul class="features">
+										
+										<li><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></li>	
+										<li>Subscriptions (IAP)</li>	
+										<li>Multiuser</li>	
+										<li>Search screen</li>	
+										<li>Search screen</li>	
+										<li>Search screen</li>	
+										<li>Search screen</li>	
+										<li>Search screen</li>	
+									</ul>
+									
+								</div>
+								
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/hmfs/slide1.png" ><img src="img/slide/hmfs/slide1.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hmfs/slide3.png" ><img src="img/slide/hmfs/slide3.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hmfs/slide4.png" ><img src="img/slide/hmfs/slide4.png" /></a>
+									</div>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/hmfs/slide5.png" ><img src="img/slide/hmfs/slide5.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hmfs/slide7.png" ><img src="img/slide/hmfs/slide7.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hmfs/slide8.png" ><img src="img/slide/hmfs/slide8.png" /></a>
+									</div>
+								</div>
+								
+									
+								
+							</div>
+						
 						</div>
 					
 					</div>
-			
+				
 				</div>
+				
+				
+				<div class="row">
 			
-			
+					<div class="col-lg-12">
+						
+						<div class="panel panel-danger">
+					
+							<div class="panel-heading">
+								<h3 class="panel-title">fasTest</h3>
+							</div>
+				
+							<div class="panel-body">
+							
+								<div class="col-lg-12">
+									<p>fastTest </p>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/fastest/slide1.png" ><img src="img/slide/fastest/slide1.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/fastest/slide2.png" ><img src="img/slide/fastest/slide2.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/fastest/slide3.png" ><img src="img/slide/fastest/slide3.png" /></a>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/fastest/slide4.png" ><img src="img/slide/fastest/slide4.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/fastest/slide5.png" ><img src="img/slide/fastest/slide5.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/fastest/slide6.png" ><img src="img/slide/fastest/slide6.png" /></a>
+									</div>
+								</div>
+								
+								
+							</div>
+						
+						</div>
+					
+					</div>
+				
+				</div>
+				
 				
 				
 				
 				<div class="row">
-				
+			
 					<div class="col-lg-12">
 						
-						<div class="bs-component">
-			
-							<h2>iChing</h2>
-			
-							<img src="img/workother/ching1.jpg" width="300"/>
-							<img src="img/workother/ching2.jpg"  width="300"/>
-							
-							<div class="clear"></div>
-							
-							<div class="gitsrc">
-								<p><a href="https://github.com/jgrindall/iChing">Source code (github)</a></p>
+						<div class="panel panel-primary">
+					
+							<div class="panel-heading">
+								<h3 class="panel-title">Hot Topics</h3>
 							</div>
-							
-							<div class="gplay">
-								<p><a href="https://play.google.com/store/apps/details?id=com.jgrindall.android.connect4&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5qZ3JpbmRhbGwuYW5kcm9pZC5jb25uZWN0NCJd">Find it on Google Play</a></p>
+				
+							<div class="panel-body">
+								
+								<div class="col-lg-12">
+									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide8.png" ><img src="img/slide/hottopics/slide8.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide2.png" ><img src="img/slide/hottopics/slide2.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide3.png" ><img src="img/slide/hottopics/slide3.png" /></a>
+									</div>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide7.png" ><img src="img/slide/hottopics/slide7.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide1.png" ><img src="img/slide/hottopics/slide1.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide6.png" ><img src="img/slide/hottopics/slide6.png" /></a>
+									</div>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide11.png" ><img src="img/slide/hottopics/slide11.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide4.png" ><img src="img/slide/hottopics/slide4.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/hottopics/slide9.png" ><img src="img/slide/hottopics/slide9.png" /></a>
+									</div>
+								</div>
+								
+								
+								
 							</div>
-			
+						
 						</div>
 					
 					</div>
-			
+				
 				</div>
+				
+				
+				<div class="row">
 			
-				<!--<h3>Msc, hottopics, create&display, datahandling, science sims, sam learning, science sims, RTM, heymath</h3>-->
+					<div class="col-lg-12">
+						
+						<div class="panel panel-warning">
+					
+							<div class="panel-heading">
+								<h3 class="panel-title">Scholastic Create and Display & Data handling</h3>
+							</div>
+				
+							<div class="panel-body">
+								
+								
+								<div class="col-lg-12">
+									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
+								</div>
+								
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/datahandling/slide4.png" ><img src="img/slide/datahandling/slide4.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/createanddisplay/slide4.png" ><img src="img/slide/createanddisplay/slide4.png" /></a>
+										
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/createanddisplay/slide2.png" ><img src="img/slide/createanddisplay/slide2.png" /></a>
+									</div>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/datahandling/slide3.png" ><img src="img/slide/datahandling/slide3.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/datahandling/slide1.png" ><img src="img/slide/datahandling/slide1.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/datahandling/slide2.png" ><img src="img/slide/datahandling/slide2.png" /></a>
+									</div>
+								</div>
+								
+							</div>
+						
+						</div>
+					
+					</div>
+				
+				</div>
+				
+				
+				
+				
+				<div class="row">
+			
+					<div class="col-lg-12">
+						
+						<div class="panel panel-info">
+					
+							<div class="panel-heading">
+								<h3 class="panel-title">Return to Mechania</h3>
+							</div>
+				
+							<div class="panel-body">
+								
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide1.png" ><img src="img/slide/rtm/slide6.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide7.png" ><img src="img/slide/rtm/slide7.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide4.png" ><img src="img/slide/rtm/slide4.png" /></a>
+									</div>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide12.png" ><img src="img/slide/rtm/slide12.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide13.png" ><img src="img/slide/rtm/slide13.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide1.png" ><img src="img/slide/rtm/slide1.png" /></a>
+									</div>
+								</div>
+								
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide10.png" ><img src="img/slide/rtm/slide10.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide8.png" ><img src="img/slide/rtm/slide8.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/rtm/slide11.png" ><img src="img/slide/rtm/slide11.png" /></a>
+									</div>
+								</div>
+								
+								
+								
+								<div class="col-lg-12">
+									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
+								</div>
+								
+								
+							</div>
+						
+						</div>
+					
+					</div>
+				
+				</div>
+				
+				
+				
+				
+				<div class="row">
+			
+					<div class="col-lg-12">
+						
+						<div class="panel panel-success">
+					
+							<div class="panel-heading">
+								<h3 class="panel-title">Scholastic Shockwaves</h3>
+							</div>
+				
+							<div class="panel-body">
+								
+								<div class="col-lg-12">
+									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/shockwaves/slide1.png" ><img src="img/slide/shockwaves/slide5.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/shockwaves/slide2.png" ><img src="img/slide/shockwaves/slide2.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/shockwaves/slide4.png" ><img src="img/slide/shockwaves/slide4.png" /></a>
+									</div>
+								</div>
+								
+								<div class="col-lg-12">
+									<div class="col-lg-4">
+										<a href="img/slide/shockwaves/slide6.png" ><img src="img/slide/shockwaves/slide6.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/shockwaves/slide5.png" ><img src="img/slide/shockwaves/slide5.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/shockwaves/slide7.png" ><img src="img/slide/shockwaves/slide7.png" /></a>
+									</div>
+								</div>
+								
+								
+								
+							</div>
+						
+						</div>
+					
+					</div>
+				
+				</div>
+				
+				
+				
+				
+				<div class="row">
+			
+					<div class="col-lg-12">
+						
+						<div class="panel panel-danger">
+					
+							<div class="panel-heading">
+								<h3 class="panel-title">Mary Glasgow magazines & Scholastic Maths readers</h3>
+							</div>
+				
+							<div class="panel-body">
+								
+								<div class="col-lg-12">
+									<p><a href="http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1">http://www.amazon.co.uk/Castles-Hot-Topics-Peter-Riley/dp/0439945100/ref=sr_1_fkmr1_3?ie=UTF8&qid=1328909916&sr=8-3-fkmr1</a></p>
+								</div>
+								
+								
+								<div class="col-lg-12">
+									
+									<div class="col-lg-4">
+										<a href="img/slide/maryg/slide2.png" ><img src="img/slide/maryg/slide2.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/maryg/slide3.png" ><img src="img/slide/maryg/slide3.png" /></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="img/slide/mathsreaders/slide1.png" ><img src="img/slide/mathsreaders/slide1.png" /></a>
+									</div>
+								</div>
+								
+								
+								
+							</div>
+						
+						</div>
+					
+					</div>
+				
+				</div>
 				
 			</div>
 			
@@ -645,13 +948,128 @@
 		
 		
 		
+		<script type="text/template" id="tpl_otherpage">
+		
+			<div class="container">
+			
+				<div class="page-header" >
+					
+					
+				
+					<div class="row">
+					
+						<div class="col-lg-6">
+							
+							<div class="bs-component">
+						  
+								<blockquote>
+									
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+									<small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+									
+								</blockquote>
+							
+							</div>
+					  
+						</div>
+					
+					</div>
+					
+					
+					
+					<div class="row">
+					
+						<div class="col-lg-12">
+							
+							<div class="bs-component">
+				
+								<h3>Power 4-in-a-row</h3>
+				
+								<p>Power 4-in-a-row is a native Android app, written in Java.  It is based on Connect 4, but that name
+								is copyrighted. It is very similar to Connect 4 with the addition of a yellow power ball that either player can use to complete his/her line</p>
+								
+								<img src="img/workother/connect4_screen.jpg" width="200"/>
+								
+								<img src="img/workother/connect4_screen2.jpg"  width="200"/>
+								
+								<img src="img/workother/connect4_screen3.jpg"  width="200"/>
+								
+								<div class="clear"></div>
+								
+								<div class="gitsrc">
+									<p><a href="https://github.com/jgrindall/Android-Power-4-in-a-row">Source code (github)</a></p>
+								</div>
+								
+								<div class="gplay">
+									<p><a href="https://play.google.com/store/apps/details?id=com.jgrindall.android.connect4&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5qZ3JpbmRhbGwuYW5kcm9pZC5jb25uZWN0NCJd">Find it on Google Play</a></p>
+								</div>
+								
+								<p>Features:</p>
+								
+								<ul style="margin-left:80px;">
+									
+									<li>One or two player</li>
+									<li>Three levels of difficulty</li>
+									<li>Optional powerball</li>
+									<li>Native android app</li>
+									<li>Undo</li>
+									<li>AI</li>
+									
+								</ul>
+				
+							</div>
+							
+						</div>
+					
+					</div>
+					
+					
+					
+					
+					
+					<div class="row">
+					
+						<div class="col-lg-12">
+							
+							<div class="bs-component">
+				
+								<h2>iChing</h2>
+				
+								<img src="img/workother/ching1.jpg" width="300"/>
+								<img src="img/workother/ching2.jpg"  width="300"/>
+								
+								<div class="clear"></div>
+								
+								<div class="gitsrc">
+									<p><a href="https://github.com/jgrindall/iChing">Source code (github)</a></p>
+								</div>
+								
+								<div class="gplay">
+									<p><a href="https://play.google.com/store/apps/details?id=com.jgrindall.android.connect4&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5qZ3JpbmRhbGwuYW5kcm9pZC5jb25uZWN0NCJd">Find it on Google Play</a></p>
+								</div>
+				
+							</div>
+						
+						</div>
+				
+					</div>
+				
+					<!--flash stuff Msc, science sims, sam learning -->
+					
+				</div>
+			
+			</div>
+
+		</script>
+
+		
 		
 		
 		<script type="text/template" id="tpl_workpage">
 		
 			<div class="container">
 			
-				<div class="page-header" style="margin-top:95px;">
+				<div class="page-header" >
 				
 				</div>
 			
@@ -667,7 +1085,7 @@
 		
 			<div class="container">
 				
-				<div class="page-header" style="margin-top:95px;">
+				<div class="page-header" >
 				
 				</div>
 			
@@ -684,8 +1102,10 @@
 	
 		<script src="js/main-min.js"></script>
 		
+		<div id="header"></div>
 		<div id="container"></div>
-	
+		<div id="footer"></div>
+		
 	</body>
   
 </html>

@@ -6,7 +6,8 @@ App.OtherPageView = Backbone.View.extend({
 	},
 	template:"tpl_otherpage",
 	addChildren:function(){
-		
+		this.v1 = new App.AboutBoxView();
+		this.$(".page-header").append(this.v1.$el);
 	},
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );
