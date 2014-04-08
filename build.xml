@@ -26,8 +26,10 @@
 				<file name="views/workpage.js"/>
 				<file name="views/otherpage.js"/>
 				<file name="views/contactpage.js"/>
+				<file name="views/videos.js"/>
 				<file name="views/text.js"/>
 				<file name="views/work.js"/>
+				<file name="views/other.js"/>
 				<file name="views/intro.js"/>
 				<file name="views/footer.js"/>
 				<file name="views/aboutbox.js"/>
