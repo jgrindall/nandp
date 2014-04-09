@@ -78,3 +78,13 @@ blockquote {
 	font-size: 85%;
 	margin-top:20px;
 }
+table.bio td{
+	padding:5px;
+}
+table.bio td:first-child{
+	padding-right:10px;
+}
+
+#contact h4{
+	margin-top:20px;
+}
