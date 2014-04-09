@@ -89,3 +89,9 @@ table.bio td:first-child{
 #contact h4{
 	margin-top:20px;
 }
+a.form img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
