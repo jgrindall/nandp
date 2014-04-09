@@ -6,7 +6,7 @@ var exec = require('child_process').exec;
 var fs = require('fs');
 var wkhtmltopdf_path = process.env.PORT ? './bin/wkhtmltopdf-linux-amd64' : 'wkhtmltopdf';
 var pdf_path = './public/gen/resume.pdf';
-var pdf_url = 'http://www.numbersandpictures.com/#contact';
+var pdf_url = 'http://localhost:5000/#contact';
 var mkdirp = require('mkdirp');
 
 var makeGen = function(options){
@@ -19,7 +19,7 @@ var makeGen = function(options){
 
 var generatePdf = function(options){
 	makeGen({"success":function(){
-		var child = exec([wkhtmltopdf_path, '--print-media-type', '--no-background', pdf_url, pdf_path].join(' '),	
+		var child = exec([wkhtmltopdf_path, '--print-media-type', pdf_url, pdf_path].join(' '),	
 		function (error, stdout, stderr) {
 			console.log('stdout: ' + stdout);
 			console.log('stderr: ' + stderr);

@@ -76,7 +76,8 @@ blockquote {
 #footer p{
 	text-align: center;
 	font-size: 85%;
-	margin-top:20px;
+	margin-top:10px;
+	color: #999;
 }
 table.bio td{
 	padding:5px;

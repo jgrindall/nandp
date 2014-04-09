@@ -204,6 +204,7 @@ App.Router = Backbone.Router.extend({
 		if(this.page.afterAdded){
 			this.page.afterAdded();
 		}
+		window.scrollTo(0, 0);
 		App.headerModel.set({"shown":index});
     }
 });
