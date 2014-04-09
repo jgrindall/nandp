@@ -5,8 +5,12 @@ App.WorkPageView = Backbone.View.extend({
 		this.data = data;
 		this.render();
 	},
+	events:{
+		
+	},
 	template:"tpl_workpage",
 	addChildren:function(){
+		var target;
 		this.v1 = new App.WorkView({"num":1});
 		this.v2 = new App.WorkView({"num":2});
 		this.v3 = new App.WorkView({"num":3});
@@ -17,15 +21,7 @@ App.WorkPageView = Backbone.View.extend({
 		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el).append(this.v4.$el).append(this.v5.$el).append(this.v6.$el).append(this.v7.$el);
 	},
 	afterAdded:function(){
-		this.scroll();
-	},
-	scroll:function(){
-		if(this.data.scrollTo && !isNaN(this.data.scrollTo)){
-			var target = this.$(".page-header > .row:nth-child("+this.data.scrollTo+")");
-			if(target && target.length >= 1){
-				$.scrollTo(target, 500);
-			}
-		}
+		
 	},
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );

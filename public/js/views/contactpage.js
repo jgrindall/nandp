@@ -4,7 +4,7 @@ App.ContactPageView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
 	},
-	template:"tpl_contactpage",
+	template:"tpl_contact",
 	addChildren:function(){
 		
 	},

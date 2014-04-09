@@ -19,7 +19,7 @@
 	text-align:justify;
 	margin: 10px;
 }
-#videos span.glyphicon{
+#videos span.glyphicon, #other span.glyphicon{
 	font-size: 70px;
 	position: absolute;
 	top: 50%;
@@ -31,11 +31,11 @@
 	cursor:pointer;
 	cursor:hand;
 }
-#videos span.glyphicon:hover{
+#videos span.glyphicon:hover, #other span.glyphicon:hover{
 	opacity:0.9;
 	color:#aaa;
 }
-#videos img, #work img{
+#videos img, #work img,  #other img{
 	width:100%;
 	cursor:pointer;
 	cursor:hand;

@@ -170,7 +170,6 @@ App.Router = Backbone.Router.extend({
     routes:{
 		""									:	"home",
 		"home"								:	"home",
-		"work/:n"							:	"work",
 		"work"								:	"work",
 		"other"								:	"other",
 		"contact"							:	"contact"
@@ -191,8 +190,8 @@ App.Router = Backbone.Router.extend({
 		var v = new App.ContactPageView( );
 		this.changePage(v, 3);
 	},
-	work:function(n){
-		var v = new App.WorkPageView( {"scrollTo":n} );
+	work:function(){
+		var v = new App.WorkPageView( );
 		this.changePage(v, 1);
 	},
    changePage:function (page, index) {
@@ -269,8 +268,12 @@ App.WorkPageView = Backbone.View.extend({
 		this.data = data;
 		this.render();
 	},
+	events:{
+		
+	},
 	template:"tpl_workpage",
 	addChildren:function(){
+		var target;
 		this.v1 = new App.WorkView({"num":1});
 		this.v2 = new App.WorkView({"num":2});
 		this.v3 = new App.WorkView({"num":3});
@@ -281,15 +284,7 @@ App.WorkPageView = Backbone.View.extend({
 		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el).append(this.v4.$el).append(this.v5.$el).append(this.v6.$el).append(this.v7.$el);
 	},
 	afterAdded:function(){
-		this.scroll();
-	},
-	scroll:function(){
-		if(this.data.scrollTo && !isNaN(this.data.scrollTo)){
-			var target = this.$(".page-header > .row:nth-child("+this.data.scrollTo+")");
-			if(target && target.length >= 1){
-				$.scrollTo(target, 500);
-			}
-		}
+		
 	},
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );
@@ -311,10 +306,12 @@ App.OtherPageView = Backbone.View.extend({
 	},
 	template:"tpl_otherpage",
 	addChildren:function(){
-		this.v1 = new App.OtherView({"num":3});
-		this.v2 = new App.OtherView({"num":1});
-		this.v3 = new App.OtherView({"num":2});
-		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el);
+		this.v1 = new App.OtherView({"num":1});
+		this.v2 = new App.OtherView({"num":2});
+		this.v3 = new App.OtherView({"num":3});
+		this.v4 = new App.OtherView({"num":4});
+		this.v5 = new App.OtherView({"num":5});
+		this.$(".page-header").append(this.v1.$el).append(this.v2.$el).append(this.v3.$el).append(this.v4.$el).append(this.v5.$el);
 	},
 	render:function(){
 		this.loadTemplate(this.template, {}, {replace:true} );
@@ -334,7 +331,7 @@ App.ContactPageView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
 	},
-	template:"tpl_contactpage",
+	template:"tpl_contact",
 	addChildren:function(){
 		
 	},
