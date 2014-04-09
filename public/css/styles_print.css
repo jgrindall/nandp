@@ -1,0 +1,45 @@
+@media print{
+	img{
+		display:none !important;
+	}
+	html{
+		font-family:Tahoma, Arial !important;
+		font-size:95% !important;
+	}
+	.panel  > .panel-heading {
+		color: white !important;
+		border-color: transparent !important;
+		-webkit-print-color-adjust: exact !important;
+		border-radius:4px !important;
+		padding:5px !important;
+		padding-top:0.3px !important;
+		padding-bottom:0.3px !important;
+	}
+	.row:nth-child(1) .panel > .panel-heading{
+		background-color: #158CBA !important;
+	}
+	.row:nth-child(2) .panel > .panel-heading{
+		background-color: #28B62C !important;
+	}
+	.row:nth-child(3) .panel > .panel-heading{
+		background-color: #ff4136 !important;
+	}
+	.row:nth-child(4) .panel > .panel-heading{
+		background-color: #ff4136 !important;
+	}
+	.container > .page-header {
+		margin-top: 15px !important;
+	}
+	#header{
+		display:none !important;
+	}
+	.panel  > .panel-heading a{
+		color:#fff;
+	}
+	table.bio td{
+		padding:5px !important;
+	}
+	table.bio td:first-child{
+		padding-right:10px !important;
+	}
+}
