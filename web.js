@@ -7,21 +7,31 @@ var fs = require('fs');
 var wkhtmltopdf_path = process.env.PORT ? './bin/wkhtmltopdf-linux-amd64' : 'wkhtmltopdf';
 var pdf_path = './public/gen/resume.pdf';
 var pdf_url = 'http://www.numbersandpictures.com/#contact';
+var mkdirp = require('mkdirp');
+
+var makeGen = function(options){
+	mkdirp('./public/gen', function(err) { 
+		console.log("err is "+err);
+		options.success();
+	});
+};
 
 
 var generatePdf = function(options){
-	var child = exec([wkhtmltopdf_path, '--print-media-type', '--no-background', pdf_url, pdf_path].join(' '),	
-	function (error, stdout, stderr) {
-		console.log('stdout: ' + stdout);
-		console.log('stderr: ' + stderr);
-		if (error !== null) {
-			console.log('exec error: ' + error);
-		}
-		else{
-			console.log('DONE');
-			options.success();
-		}
-	});
+	makeGen({"success":function(){
+		var child = exec([wkhtmltopdf_path, '--print-media-type', '--no-background', pdf_url, pdf_path].join(' '),	
+		function (error, stdout, stderr) {
+			console.log('stdout: ' + stdout);
+			console.log('stderr: ' + stderr);
+			if (error !== null) {
+				console.log('exec error: ' + error);
+			}
+			else{
+				console.log('DONE');
+				options.success();
+			}
+		});
+	}});
 };
 
 var getPdf = function(options){
