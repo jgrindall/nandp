@@ -41,6 +41,19 @@
 			</filelist>
 		</concat>
 		
+		
+		
+		<concat destfile="libs/libs-min.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
+			<filelist dir="libs">
+				
+				
+				<file name="underscore-1.4.4.js"/>
+				<file name="jquery-1.9.1.js"/>		
+				<file name="backbone-1.0.0.js"/>		
+				
+			</filelist>
+		</concat>
+		
 	</target>
 	
 </project>
