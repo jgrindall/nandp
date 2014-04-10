@@ -4,6 +4,13 @@
 #videos{
 	padding-top:40px;
 }
+p{
+	color:#111;
+}
+.alert p{
+	color:white;
+}
+
 #intro{
 	margin-top:20px;
 }
@@ -57,7 +64,7 @@
 	margin-left: 10px;
 }
 ul.navbar-nav{
-	margin-top: 19px;
+	margin-top: 16px;
 }
 #work{
 	margin-top:95px;
@@ -69,9 +76,10 @@ ul.navbar-nav{
 ul.features li{
 	padding:4px;
 }
-blockquote {
+blockquote p{
 	font-size: 15px;
-	color: #888;
+	color: #888 !important;
+	text-align: justify;
 }
 #footer p{
 	text-align: center;

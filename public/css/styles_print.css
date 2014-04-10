@@ -1,13 +1,13 @@
 @media print{
-	img{
-		display:none !important;
-	}
 	*{
 		-webkit-print-color-adjust: exact !important;
 	}
 	html{
 		font-family: Tahoma, Arial !important;
 		font-size:95% !important;
+	}
+	img{
+		display:none !important;
 	}
 	.panel  > .panel-heading {
 		color: white !important;
@@ -67,5 +67,7 @@
 	a.form, a.form img{
 		display:none
 	}
-	
+	p{
+		color:black !important;
+	}
 }
