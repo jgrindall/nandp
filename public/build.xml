@@ -10,13 +10,14 @@
 		
 		<echo message="deleting"/>
 		
-		<delete file="public/js/main-min.js"/>
+		<delete file="js/main-min.js"/>
 		
-		<concat destfile="public/js/main-min.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
-			<filelist dir="public/js">
+		<concat destfile="js/main-min.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
+			<filelist dir="js">
 				
 				
 				<file name="app.js"/>
+				<file name="preloader.js"/>		
 				<file name="eventdispatcher.js"/>		
 				<file name="view.js"/>		
 				<file name="router.js"/>
