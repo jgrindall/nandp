@@ -1,13 +1,13 @@
 @media print{
-	img{
-		display:none !important;
-	}
 	*{
 		-webkit-print-color-adjust: exact !important;
 	}
 	html{
 		font-family: Tahoma, Arial !important;
 		font-size:95% !important;
+	}
+	img{
+		display:none !important;
 	}
 	.panel  > .panel-heading {
 		color: white !important;
@@ -54,11 +54,20 @@
 		margin-top:10px;
 		color: #999;
 	}
+	a {
+		color: #158CBA;
+		text-decoration: none;
+	}
 	body{
 		margin: 20px !important;
 	}
 	#contact .btn-primary{
 		display:none;
 	}
-	
+	a.form, a.form img{
+		display:none
+	}
+	p{
+		color:black !important;
+	}
 }
