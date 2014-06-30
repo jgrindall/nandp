@@ -52,12 +52,15 @@
 
 .navbar .navbar-brand{
 	height:82px;
+	height: 70px;
+	padding-top: 24px;
 }
 .navbar .navbar-brand span{
 	margin-left: 10px;
+	font-size:30px;
 }
 ul.navbar-nav{
-	margin-top: 19px;
+	margin-top: 13px;
 }
 #work{
 	margin-top:95px;

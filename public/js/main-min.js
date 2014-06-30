@@ -11,7 +11,6 @@ var App = {};
 App.EventDispatcher =  _.extend(  {}, Backbone.Events);
 
 
-
 Backbone.View.isTouch = function(){
 	try{
 		if(('ontouchstart' in window) || window.DocumentTouch && (document instanceof DocumentTouch) ) {
@@ -164,13 +163,13 @@ Backbone.View.prototype.loadTemplate = function (id, data, options) {
 	}
 };
 
-
 App.Router = Backbone.Router.extend({
 	
     routes:{
 		""									:	"home",
 		"home"								:	"home",
 		"work"								:	"work",
+		"simitri"							:	"simitri",
 		"other"								:	"other",
 		"contact"							:	"contact"
     },
@@ -184,6 +183,11 @@ App.Router = Backbone.Router.extend({
 	},
 	other:function(){
 		var v = new App.OtherPageView( );
+		this.changePage(v, 2);
+	},
+	simitri:function(){
+		alert("sim");
+		var v = new App.SimitriPageView( );
 		this.changePage(v, 2);
 	},
 	contact:function(){
@@ -226,7 +230,6 @@ App.init = function(){
 
 $(document).ready(App.init);
 
-
 App.HeaderModel = Backbone.Model.extend({
 	defaults:{
 		"shown":0
@@ -235,7 +238,6 @@ App.HeaderModel = Backbone.Model.extend({
 	
 	}
 });
-
 
 
 
@@ -259,7 +261,6 @@ App.HomePageView = Backbone.View.extend({
 		
 	}
 });
-
 
 
 
@@ -300,7 +301,6 @@ App.WorkPageView = Backbone.View.extend({
 
 
 
-
 App.OtherPageView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -327,6 +327,26 @@ App.OtherPageView = Backbone.View.extend({
 
 
 
+App.SimitriPageView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_simitripage",
+	addChildren:function(){
+		
+	},
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		this.addChildren();
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
+
+
+
 
 App.ContactPageView = Backbone.View.extend({
 	initialize:function(data){
@@ -349,7 +369,6 @@ App.ContactPageView = Backbone.View.extend({
 
 
 
-
 App.VideosView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -366,7 +385,6 @@ App.VideosView = Backbone.View.extend({
 
 
 
-
 App.TextView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -380,7 +398,6 @@ App.TextView = Backbone.View.extend({
 		
 	}
 });
-
 
 
 
@@ -402,7 +419,6 @@ App.WorkView = Backbone.View.extend({
 
 
 
-
 App.OtherView = Backbone.View.extend({
 	initialize:function(data){
 		this.data = data;
@@ -417,7 +433,6 @@ App.OtherView = Backbone.View.extend({
 		
 	}
 });
-
 
 
 
@@ -437,7 +452,6 @@ App.IntroView = Backbone.View.extend({
 
 
 
-
 App.FooterView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -454,7 +468,6 @@ App.FooterView = Backbone.View.extend({
 
 
 
-
 App.AboutBoxView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -468,7 +481,6 @@ App.AboutBoxView = Backbone.View.extend({
 		
 	}
 });
-
 
 
 
@@ -497,7 +509,6 @@ App.HeaderView = Backbone.View.extend({
 
 
 
-
 App.WorkBoxView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -514,7 +525,6 @@ App.WorkBoxView = Backbone.View.extend({
 
 
 
-
 App.ButtonsView = Backbone.View.extend({
 	initialize:function(data){
 		this.render();
@@ -528,4 +538,3 @@ App.ButtonsView = Backbone.View.extend({
 		
 	}
 });
-

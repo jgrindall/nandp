@@ -25,6 +25,7 @@
 				<file name="views/homepage.js"/>
 				<file name="views/workpage.js"/>
 				<file name="views/otherpage.js"/>
+				<file name="views/simitripage.js"/>
 				<file name="views/contactpage.js"/>
 				<file name="views/videos.js"/>
 				<file name="views/text.js"/>

@@ -5,6 +5,7 @@ App.Router = Backbone.Router.extend({
 		""									:	"home",
 		"home"								:	"home",
 		"work"								:	"work",
+		"simitri"							:	"simitri",
 		"other"								:	"other",
 		"contact"							:	"contact"
     },
@@ -18,6 +19,10 @@ App.Router = Backbone.Router.extend({
 	},
 	other:function(){
 		var v = new App.OtherPageView( );
+		this.changePage(v, 2);
+	},
+	simitri:function(){
+		var v = new App.SimitriPageView( );
 		this.changePage(v, 2);
 	},
 	contact:function(){
