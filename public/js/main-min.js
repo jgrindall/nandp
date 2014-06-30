@@ -1,4 +1,31 @@
 var App = {};
+App.ImageLoader = function(srcs, options){
+	this.options = options;
+	this.numLoaded = 0;
+	this.srcs = srcs;
+	this.imgs = [ ];
+	this.load();
+};
+
+App.ImageLoader.prototype.imgLoaded = function(){
+	console.log("loaded");
+	this.numLoaded++;
+	if(this.numLoaded === this.srcs.length){
+		this.options.success();
+	}
+};
+
+App.ImageLoader.prototype.load = function(){
+	var _this = this;
+	$.each(this.srcs, function(i, src){
+		var img = new Image();
+		var $img = $(img);
+		$img.on("load", $.proxy(_this.imgLoaded, _this));
+		$img.on("error", $.proxy(_this.imgLoaded, _this));
+		console.log(src);
+		$img.attr("src", src);
+	});
+};
 /*
 
 // A global event dispatcher.
@@ -186,7 +213,6 @@ App.Router = Backbone.Router.extend({
 		this.changePage(v, 2);
 	},
 	simitri:function(){
-		alert("sim");
 		var v = new App.SimitriPageView( );
 		this.changePage(v, 2);
 	},
@@ -217,18 +243,26 @@ App.Router = Backbone.Router.extend({
 App.create = function(){
 	App.headerModel = new App.HeaderModel();
 	App.headerView = new App.HeaderView({"model":App.headerModel});
-	$("body > #header").append(App.headerView.$el);
 	App.footerView = new App.FooterView();
-	$("body > #footer").append(App.footerView.$el);
+};
+
+App.preload = function(options){
+	var srcs = ["img/logo/logosmall.png","img/logo/dog.png","img/video/video1.png","img/video/video2.png","img/clients/clients.png","img/slide/hmfs/slide1.png","img/slide/hmfs/slide2.png","img/slide/hmfs/slide3.png","img/slide/hmfs/slide4.png","img/workother/connect4_screen.jpg","img/workother/lego1.png"];
+	new App.ImageLoader(srcs, options);
 };
 
 App.init = function(){
 	App.create();
 	App.router = new App.Router();
-	Backbone.history.start();
+	App.preload({"success":function(){
+		$("body > #header").append(App.headerView.$el);
+		$("body > #footer").append(App.footerView.$el);
+		Backbone.history.start();
+	}});
 };
 
 $(document).ready(App.init);
+
 
 App.HeaderModel = Backbone.Model.extend({
 	defaults:{

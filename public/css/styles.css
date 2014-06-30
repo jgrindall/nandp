@@ -4,6 +4,13 @@
 #videos{
 	padding-top:40px;
 }
+p{
+	color:#111;
+}
+.alert p{
+	color:white;
+}
+
 #intro{
 	margin-top:20px;
 }
@@ -45,13 +52,8 @@
 	margin-bottom:8px;
 	width:100%;
 }
-#videos #logos img:not(:nth-child(1)),#videos #logos img:not(:nth-child(2)){
-	width:80%;
-	margin-left:10%;
-}
 
 .navbar .navbar-brand{
-	height:82px;
 	height: 70px;
 	padding-top: 24px;
 }
@@ -72,9 +74,10 @@ ul.navbar-nav{
 ul.features li{
 	padding:4px;
 }
-blockquote {
+blockquote p{
 	font-size: 15px;
-	color: #888;
+	color: #888 !important;
+	text-align: justify;
 }
 #footer p{
 	text-align: center;
@@ -91,4 +94,10 @@ table.bio td:first-child{
 
 #contact h4{
 	margin-top:20px;
+}
+a.form img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
 }
