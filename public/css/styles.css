@@ -101,6 +101,11 @@ a.form img{
 	right: 0;
 	border: 0;
 }
+.carousel-inner .item img{
+	margin-left: auto;
+	margin-right: auto;	
+}
+
 img{
-	max-width:250px;
+	max-width: 100%;
 }
