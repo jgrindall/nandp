@@ -10,12 +10,18 @@ p{
 .alert p{
 	color:white;
 }
-
+h4{
+	font-size:19px;
+	color:#555;
+}
 #intro{
-	margin-top:20px;
+	margin-top:120px;
 }
 #workbox{
 	padding-top:40px;
+}
+div.tiled img{
+	padding:10px;
 }
 #intro p{
 	font-size:15px;
@@ -59,23 +65,36 @@ p{
 }
 .navbar .navbar-brand span{
 	margin-left: 10px;
-	font-size:30px;
 }
+
+.navbar a.navbar-brand.hidden-lg.hidden-md.hidden-sm span{
+	font-size:30px;	
+	color:black;
+}
+.navbar a.navbar-brand.hidden-lg.hidden-md.hidden-xs span{
+	font-size:20px;
+	color:black;	
+}
+.navbar a.navbar-brand.hidden-lg.hidden-sm.hidden-xs span{
+	font-size:24px;	
+	color:black;
+}
+.navbar a.navbar-brand.hidden-xs.hidden-md.hidden-sm span{
+	font-size:30px;
+	color:black;
+}
+
 ul.navbar-nav{
 	margin-top: 13px;
 }
 #work{
 	margin-top:95px;
 }
-#work .col-lg-4 img{
-	width:100%;
-	margin:10px;
-}
 ul.features li{
 	padding:4px;
 }
 blockquote p{
-	font-size: 15px;
+	font-size: 13px;
 	color: #888 !important;
 	text-align: justify;
 }
@@ -84,6 +103,9 @@ blockquote p{
 	font-size: 85%;
 	margin-top:10px;
 	color: #999;
+}
+#footer a{
+	color:#6490a0;
 }
 table.bio td{
 	padding:5px;

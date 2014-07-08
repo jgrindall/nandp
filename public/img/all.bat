@@ -6,7 +6,6 @@ pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\
 pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\img\logo\dog.png
 pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\img\logo\jali.png
 pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\img\logo\logo.png
-pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\img\logo\logosmall.png
 pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\img\slide\createanddisplay\slide1.png
 pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\img\slide\createanddisplay\slide2.png
 pngquant 192 --force --ext .png D:\Documents\website\stormy-thicket-1299\public\img\slide\createanddisplay\slide3.png
