@@ -14,11 +14,13 @@ App.preload = function(options){
 App.init = function(){
 	App.create();
 	App.router = new App.Router();
+	
 	App.preload({"success":function(){
 		$("body > #header").append(App.headerView.$el);
 		$("body > #footer").append(App.footerView.$el);
 		Backbone.history.start();
 	}});
+
 };
 
 $(document).ready(App.init);
