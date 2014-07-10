@@ -6,6 +6,13 @@ App.HeaderView = Backbone.View.extend({
 		this.model = data.model;
 		this.listenTo(this.model, "change", this.changeSelected, this);
 	},
+	events:{
+		"click ul.navbar-nav li a":"clickLi"
+	},
+	clickLi:function(){
+		var collapse = this.$(".navbar-collapse");
+		collapse.addClass("collapse").removeClass("in");
+	},
 	template:"tpl_header",
 	changeSelected:function(){
 		var s, i = this.model.get("shown");
