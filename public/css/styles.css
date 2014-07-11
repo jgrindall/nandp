@@ -89,6 +89,11 @@ span.glyphicon-play.playbutton:hover{
 ul.navbar-nav{
 	margin-top: 13px;
 }
+
+ul.navbar-nav li a{
+	font-size: 120%;
+}
+
 #work{
 	margin-top:95px;
 }
@@ -97,10 +102,14 @@ ul.features li{
 }
 blockquote{
 	font-size:110% !important;
-	background:#ddd;
+	background:#dedede;
 }
 blockquote small{
 	color:#158cba;
+}
+blockquote small a{
+	text-overflow:ellipsis;
+	overflow:hidden;
 }
 blockquote p{
 	color: #777 !important;
@@ -142,7 +151,7 @@ img{
 	max-width: 100%;
 }
 body{
-	background-color:#EEE !important;
+	background-color:#Efefef !important;
 	font-size:13px !important;
 }
 .container{
