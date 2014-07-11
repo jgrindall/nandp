@@ -4,6 +4,14 @@
 	
 	<property file="build.properties"></property>
 	
+	<target name="img">
+		
+		<image srcdir="imgsrc" destdir="imgdest" includes="*.png">
+   			<scale proportions="width" width="40"/>
+		</image>
+		
+	</target>
+	
 	<target name="build">
 		
 		<echo message="build"/>

@@ -7,7 +7,7 @@ App.ImageLoader = function(srcs, options){
 };
 
 App.ImageLoader.prototype.imgLoaded = function(){
-	console.log("loaded");
+	//console.log("loaded");
 	this.numLoaded++;
 	if(this.numLoaded === this.srcs.length){
 		this.options.success();
@@ -21,7 +21,7 @@ App.ImageLoader.prototype.load = function(){
 		var $img = $(img);
 		$img.on("load", $.proxy(_this.imgLoaded, _this));
 		$img.on("error", $.proxy(_this.imgLoaded, _this));
-		console.log(src);
+		//console.log(src);
 		$img.attr("src", src);
 	});
 };
