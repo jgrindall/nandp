@@ -7,7 +7,7 @@ App.create = function(){
 };
 
 App.preload = function(options){
-	var srcs = ["img/slide/simitri/roundicon.png", "img/slide/simitri/ipad1.png", "img/slide/datahandling/slide4.png", "img/slide/fastest/slide2.png", "img/slide/simitri/ipad2.png", "img/slide/simitri/ipad3.png","img/logo/dog.png","img/video/video1.png","img/video/video2.png","img/clients/clients.png","img/slide/hmfs/slide1.png","img/slide/hmfs/slide2.png","img/slide/hmfs/slide3.png","img/slide/hmfs/slide4.png","img/workother/connect4/connect4_screen.png","img/workother/lego/slide2.png"];
+	var srcs = ["img/slide/rtm/slide10.png", "img/slide/hmfs/slide2.png", "img/slide/simitri/ipad6.png", "img/logo/dog.png"];
 	new App.ImageLoader(srcs, options);
 };
 
