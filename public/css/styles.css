@@ -11,7 +11,7 @@ p{
 	color:white;
 }
 h4{
-	font-size:120%;
+	font-size:125%;
 	color:#555;
 }
 #intro{
@@ -25,7 +25,6 @@ div.tiled img{
 	max-width:605px !important;
 }
 #intro p{
-	font-size:100%;
 	text-align:justify;
 	margin: 15px;
 }
@@ -101,8 +100,7 @@ ul.features li{
 	padding:4px;
 }
 blockquote{
-	font-size:110% !important;
-	background:#dedede;
+	background:#efefef;
 }
 blockquote small{
 	color:#158cba;
@@ -110,6 +108,7 @@ blockquote small{
 blockquote small a{
 	text-overflow:ellipsis;
 	overflow:hidden;
+	word-wrap: break-word;
 }
 blockquote p{
 	color: #777 !important;
@@ -151,8 +150,7 @@ img{
 	max-width: 100%;
 }
 body{
-	background-color:#Efefef !important;
-	font-size:13px !important;
+	background-color:#ffffff !important;
 }
 .container{
 	padding-left: 7px !important;
