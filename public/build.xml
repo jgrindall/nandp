@@ -4,14 +4,6 @@
 	
 	<property file="build.properties"></property>
 	
-	<target name="img">
-		
-		<image srcdir="imgsrc" destdir="imgdest" includes="*.png">
-   			<scale proportions="width" width="40"/>
-		</image>
-		
-	</target>
-	
 	<target name="build">
 		
 		<echo message="build"/>
@@ -20,7 +12,7 @@
 		
 		<delete file="js/main-min.js"/>
 		
-		<concat destfile="js/main-min.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
+		<concat destfile="js/main-all.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
 			<filelist dir="js">
 				
 				
@@ -52,7 +44,7 @@
 		
 		
 		
-		<concat destfile="libs/libs-min.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
+		<concat destfile="libs/libs-all.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
 			<filelist dir="./">
 				
 				
@@ -62,6 +54,12 @@
 				<file name="bootstrap/js/bootstrap.min.js"/>		
 			</filelist>
 		</concat>
+		
+		<exec executable="bash">
+			
+			<arg line="jar.sh"/>
+			
+		</exec>
 		
 	</target>
 	

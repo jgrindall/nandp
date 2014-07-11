@@ -34,9 +34,9 @@ App.Router = Backbone.Router.extend({
 		this.changePage(v, 1);
 	},
    changePage:function (page, index) {
+		$('#container').empty();
 		if(this.page){
 			this.page.close();
-			$('#container').empty();
 		}
 		$('#container').append(page.$el);
 		this.page = page;
