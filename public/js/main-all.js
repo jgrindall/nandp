@@ -256,11 +256,9 @@ App.init = function(){
 	App.router = new App.Router();
 	
 	App.preload({"success":function(){
-		setTimeout(function(){
-			$("body > #header").append(App.headerView.$el);
-			$("body > #footer").append(App.footerView.$el);
-			Backbone.history.start();
-		}, 15000);
+		$("body > #header").append(App.headerView.$el);
+		$("body > #footer").append(App.footerView.$el);
+		Backbone.history.start();
 	}});
 };
 
