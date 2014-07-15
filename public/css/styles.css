@@ -13,7 +13,7 @@ p{
 }
 h4{
 	font-size:135%;
-	color:#666;
+	color:#888;
 }
 #intro{
 	margin-top:90px;
@@ -166,3 +166,51 @@ body{
 button.navbar-toggle .icon-bar{
 	border:none !important;
 }
+
+.biohazard {
+	width: 0;
+	height: 0;
+	border-bottom: 76px solid #28b62c;
+	border-top: 76px solid #158cba;
+	border-left: 76px solid #ff851b;
+	border-right: 76px solid #ff4136;
+	-moz-border-radius: 76px; 
+	-webkit-border-radius: 76px; 
+	border-radius: 76px;
+	position: absolute;
+	top: 19px;
+	right: 14px;
+	-prefix-animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	
+	-webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.320, 1);
+	-moz-transition: all 1s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	-ms-transition: all 1s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	-o-transition: all 1s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	transition: all 1s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+.biohazard.rot{
+	transform:rotate(400deg);
+	-ms-transform:rotate(400deg); /* IE 9 */
+	-webkit-transform:rotate(400deg); /* Opera, Chrome, and Safari */
+}
+
+			
