@@ -198,6 +198,7 @@ App.Router = Backbone.Router.extend({
 		"work"								:	"work",
 		"simitri"							:	"simitri",
 		"logotacular"						:	"logotacular",
+		"logotacularapp"					:	"logotacularapp",
 		"other"								:	"other",
 		"contact"							:	"contact"
     },
@@ -219,6 +220,10 @@ App.Router = Backbone.Router.extend({
 	},
 	logotacular:function(){
 		var v = new App.LogotacularPageView( );
+		this.changePage(v, 2);
+	},
+	logotacularapp:function(){
+		var v = new App.LogotacularAppPageView( );
 		this.changePage(v, 2);
 	},
 	contact:function(){
@@ -407,6 +412,24 @@ App.LogotacularPageView = Backbone.View.extend({
 	}
 });
 
+
+App.LogotacularAppPageView = Backbone.View.extend({
+	initialize:function(data){
+		this.render();
+	},
+	template:"tpl_logotacularapppage",
+	addChildren:function(){
+		
+	},
+	render:function(){
+		this.loadTemplate(this.template, {}, {replace:true} );
+		this.addChildren();
+		return this;
+	},
+	beforeClose:function(){
+		
+	}
+});
 
 
 
