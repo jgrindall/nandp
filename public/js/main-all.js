@@ -252,7 +252,7 @@ App.create = function(){
 };
 
 App.preload = function(options){
-	var srcs = ["img/slide/rtm/slide10.png", "img/slide/hmfs/slide2.png", "img/slide/simitri/ipad6.png", "img/logo/dog.png"];
+	var srcs = ["img/slide/rtm/slide10.png", "img/slide/hmfs/slide2.png", "img/slide/simitri/ipad6.png", "img/logo/john.png"];
 	new App.ImageLoader(srcs, options);
 };
 
