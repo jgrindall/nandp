@@ -8,7 +8,8 @@ App.Router = Backbone.Router.extend({
 		"simitri"							:	"simitri",
 		"logotacularapp"					:	"logotacularapp",
 		"other"								:	"other",
-		"contact"							:	"contact"
+		"contact"							:	"contact",
+		"random"							:	"random"
     },
 	initialize:function () {
 		// this.page is the current page that's shown.
@@ -24,6 +25,10 @@ App.Router = Backbone.Router.extend({
 	},
 	simitri:function(){
 		var v = new App.SimitriPageView( );
+		this.changePage(v, 2);
+	},
+	random:function(){
+		var v = new App.RandomView( );
 		this.changePage(v, 2);
 	},
 	logotacularapp:function(){
