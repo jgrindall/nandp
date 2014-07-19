@@ -9,7 +9,8 @@ App.Router = Backbone.Router.extend({
 		"logotacularapp"					:	"logotacularapp",
 		"other"								:	"other",
 		"contact"							:	"contact",
-		"random"							:	"random"
+		"random"							:	"random",
+		"as3logo"							:	"as3logo"
     },
 	initialize:function () {
 		// this.page is the current page that's shown.
@@ -29,6 +30,10 @@ App.Router = Backbone.Router.extend({
 	},
 	random:function(){
 		var v = new App.RandomView( );
+		this.changePage(v, 2);
+	},
+	as3logo:function(){
+		var v = new App.AS3LogoView( );
 		this.changePage(v, 2);
 	},
 	logotacularapp:function(){
