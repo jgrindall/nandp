@@ -34,8 +34,8 @@
 		background: #ff4136 !important;
 	}
 	.row:nth-child(4) .panel > .panel-heading{
-		background-color: #ff4136 !important;
-		background: #ff4136 !important;
+		background-color: #75caeb !important;
+		background: #75caeb !important;
 	}
 	.container > .page-header {
 		margin-top: 15px !important;
@@ -59,17 +59,16 @@
 		margin-top:10px;
 		color: #999;
 	}
-	h3, h4{
-		font-size:120% !important;
-	}
 	h3{
 		color:white !important;
 		font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		font-size:120% !important;
 	}
 	h4{
-		color:#888;
+		color:#999;
 		margin-top:16px;
 		margin-bottom:16px;
+		font-size:140% !important;
 	}
 	a {
 		color: #158CBA;
