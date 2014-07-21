@@ -57,11 +57,16 @@
 		color: #999;
 	}
 	h3, h4{
+		font-size:120% !important;
+		font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	}
+	h3{
+		color:white !important;
+	}
+	h4{
 		color:#888;
 		margin-top:16px;
 		margin-bottom:16px;
-		font-size:130% !important;
-		font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	}
 	a {
 		color: #158CBA;
