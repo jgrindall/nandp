@@ -170,13 +170,13 @@ button.navbar-toggle .icon-bar{
 .biohazard {
 	width: 0;
 	height: 0;
-	border-bottom: 76px solid #28b62c;
-	border-top: 76px solid #158cba;
-	border-left: 76px solid #ff851b;
-	border-right: 76px solid #ff4136;
-	-moz-border-radius: 76px; 
-	-webkit-border-radius: 76px; 
-	border-radius: 76px;
+	border-bottom: 78px solid #28b62c;
+	border-top: 78px solid #158cba;
+	border-left: 78px solid #ff851b;
+	border-right: 78px solid #ff4136;
+	-moz-border-radius: 78px; 
+	-webkit-border-radius: 78px; 
+	border-radius: 78px;
 	position: absolute;
 	top: 19px;
 	right: 14px;
