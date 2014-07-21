@@ -6,7 +6,7 @@ var exec = require('child_process').exec;
 var fs = require('fs');
 var wkhtmltopdf_path = process.env.PORT ? './bin/wkhtmltopdf-linux-amd64' : 'wkhtmltopdf';
 var pdf_path = './public/gen/resume.pdf';
-var pdf_url = 'http://localhost:5000/#contact';
+var pdf_url = 'http://www.numbersandpictures.com/#contact';
 var mkdirp = require('mkdirp');
 
 var makeGen = function(options){
