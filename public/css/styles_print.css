@@ -2,9 +2,9 @@
 	*{
 		-webkit-print-color-adjust: exact !important;
 	}
-	html{
+	body{
 		font-family: Tahoma, Arial !important;
-		font-size:85% !important;
+		font-size:12px !important;
 	}
 	img{
 		display:none !important;
@@ -53,6 +53,12 @@
 		font-size: 85%;
 		margin-top:10px;
 		color: #999;
+	}
+	h4{
+		color:#888;
+		margin-top:12px;
+		margin-bottom:12px;
+		font-size:160% !important;
 	}
 	a {
 		color: #158CBA;
