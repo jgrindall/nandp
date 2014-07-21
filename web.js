@@ -8,6 +8,7 @@ var wkhtmltopdf_path = process.env.PORT ? './bin/wkhtmltopdf-linux-amd64' : 'wkh
 var pdf_path = './public/gen/resume.pdf';
 var pdf_url = 'http://www.numbersandpictures.com/#contact';
 var mkdirp = require('mkdirp');
+var alwaysGeneratePdf = true;
 
 var makeGen = function(options){
 	mkdirp('./public/gen', function(err) { 
@@ -60,7 +61,7 @@ app.get('/resume', function(req, res) {
 	var content;
 	fs.exists(pdf_path, function(exists) {
 		console.log("exists "+exists);
-		if (exists){
+		if (exists && !alwaysGeneratePdf){
 			getPdf({"success":function(content){
 				res.writeHead(200, { 'Content-Type': 'application/pdf' });
 				res.end(content, 'utf-8');
