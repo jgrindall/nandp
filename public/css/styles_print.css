@@ -17,7 +17,7 @@
 		-webkit-print-color-adjust: exact !important;
 		border-radius:4px !important;
 		padding:3px !important;
-		margin-top:12px !important;
+		margin-top:20px !important;
 	}
 	.panel  > .panel-heading > h3{
 		margin:10px;
@@ -27,13 +27,13 @@
 		background: #158CBA !important;
 	}
 	.row:nth-child(2) .panel > .panel-heading{
-		background-color: #28B62C !important;
-		background: #28B62C !important;
-	}
-	.row:nth-child(3) .panel > .panel-heading{
 		background-color: #ff4136 !important;
 		background: #ff4136 !important;
 	}
+	.row:nth-child(3) .panel > .panel-heading{
+		background-color: #28B62C !important;
+		background: #28B62C !important;
+	}	
 	.row:nth-child(4) .panel > .panel-heading{
 		background-color: #75caeb !important;
 		background: #75caeb !important;
