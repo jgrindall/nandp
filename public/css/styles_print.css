@@ -1,10 +1,9 @@
 @media print{
 	*{
 		-webkit-print-color-adjust: exact !important;
-		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 	}
 	body{
-		font-family: Tahoma, Arial !important;
+		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 		font-size:12px !important;
 	}
 	img{
