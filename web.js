@@ -8,7 +8,7 @@ var wkhtmltopdf_path = process.env.PORT ? './bin/wkhtmltopdf-linux-amd64' : 'wkh
 var pdf_path = './public/gen/resume.pdf';
 var pdf_url = 'http://www.numbersandpictures.com/#contact';
 var mkdirp = require('mkdirp');
-var alwaysGeneratePdf = true;
+var alwaysGeneratePdf = false;
 
 var makeGen = function(options){
 	mkdirp('./public/gen', function(err) { 
