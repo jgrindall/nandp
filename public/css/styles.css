@@ -113,17 +113,17 @@ blockquote small a{
 	text-overflow:ellipsis;
 	overflow:hidden;
 	word-wrap: break-word;
-	font-size:80% !important;
+	font-size:70% !important;
 }
 blockquote p{
 	color: #777 !important;
 	text-align: justify;
 	font-style: italic;
-	font-size:80% !important;
+	font-size:70% !important;
 }
 #footer p{
 	text-align: center;
-	font-size:72% !important;
+	font-size:70% !important;
 	margin-top:10px;
 	color: #999;
 }
