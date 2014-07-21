@@ -2,8 +2,8 @@
 	*{
 		-webkit-print-color-adjust: exact !important;
 	}
-	body{
-		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	html, body, p{
+		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif !important;
 		font-size:12px !important;
 	}
 	img{
