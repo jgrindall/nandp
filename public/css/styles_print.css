@@ -27,12 +27,15 @@
 	}
 	.row:nth-child(2) .panel > .panel-heading{
 		background-color: #28B62C !important;
+		background: #28B62C !important;
 	}
 	.row:nth-child(3) .panel > .panel-heading{
 		background-color: #ff4136 !important;
+		background: #ff4136 !important;
 	}
 	.row:nth-child(4) .panel > .panel-heading{
 		background-color: #ff4136 !important;
+		background: #ff4136 !important;
 	}
 	.container > .page-header {
 		margin-top: 15px !important;
