@@ -1,6 +1,7 @@
 @media print{
 	*{
 		-webkit-print-color-adjust: exact !important;
+		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 	}
 	body{
 		font-family: Tahoma, Arial !important;
@@ -56,9 +57,9 @@
 	}
 	h4{
 		color:#888;
-		margin-top:12px;
-		margin-bottom:12px;
-		font-size:160% !important;
+		margin-top:14px;
+		margin-bottom:14px;
+		font-size:130% !important;
 	}
 	a {
 		color: #158CBA;
@@ -75,5 +76,8 @@
 	}
 	p{
 		color:black !important;
+	}
+	#footer{
+		display:none;
 	}
 }
