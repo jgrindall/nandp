@@ -17,6 +17,7 @@
 		-webkit-print-color-adjust: exact !important;
 		border-radius:4px !important;
 		padding:3px !important;
+		margin-top:12px !important;
 	}
 	.panel  > .panel-heading > h3{
 		margin:10px;
