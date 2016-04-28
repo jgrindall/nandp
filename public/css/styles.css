@@ -218,5 +218,6 @@ button.navbar-toggle .icon-bar{
 	-ms-transform:rotate(400deg); /* IE 9 */
 	-webkit-transform:rotate(400deg); /* Opera, Chrome, and Safari */
 }
-
-			
+a{
+	color:#104A61;
+}
